@@ -9,10 +9,10 @@ class Router extends \mf\router\AbstractRouter {
         parent::__construct();
     }    
     
-    public function addRoute($name, $url, $ctrl, $mth, $level_access){
+    public function addRoute($name, $url, $ctrl, $mth){
         
 
-        self::$routes[$url]=[$ctrl, $mth,$level_access]  ;
+        self::$routes[$url]=[$ctrl, $mth]  ;
         self::$aliases[$name]=$url  ;
     }
 
