@@ -22,5 +22,8 @@ $loader->register();
 mf\view\AbstractView::addStyleSheet('html/style.css');
 $router = new \mf\router\Router();
 
-$router->addRoute('home','/home/','\appClient\control\ClientController','viewHome');
+////////////////////////////application client///////////////////////////////////
+
+$router->addRoute('categorie','/categorie/','\appClient\control\ClientController','viewCategorie');
+$router->addRoute('produits','/produits/','\appClient\control\ClientController','viewProduit');
 $router->run();

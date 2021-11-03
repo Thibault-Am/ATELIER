@@ -37,29 +37,35 @@ class ClientView extends \mf\view\AbstractView {
      *  
      */
     
-    private function renderHome(){
-       $resultat="<div class='categorie'>";
-       $router = new \mf\router\Router();
-       
-     
-            $categorie = \appClient\model\Categorie::select()->get();    
+    private function renderCategorie(){
+       $resultat="<section class='categorie'>";
+       $router = new \mf\router\Router();  
             //var_dump($categorie);
-            foreach($categorie as $cat){
-                $resultat =$resultat."<div><a href=\"../\">".$cat->Nom."</a></div>";
+            foreach($this->data as $cat){
+                $resultat =$resultat."<article><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
             }
            
         
-        $resultat=$resultat."</div>";
-        return $resultat;
-        /*
-         * Retourne le fragment HTML qui affiche tous les Tweets. 
-         *  
-         * L'attribut $this->data contient un tableau d'objets tweet.
-         * 
-         */
-        
+        $resultat=$resultat."</section>";
+        return $resultat;        
         
     }
+
+    private function renderProduit(){
+        $id_categorie=$_GET['id_categorie'];
+        $categorie=\appClient\model\Categorie::where('id',"=",$id_categorie)->first();
+        $resultat="<section class='produit'> <h1>$categorie->Nom</h1>";
+        $router = new \mf\router\Router();  
+             //var_dump($categorie);
+             foreach($this->data as $produit){
+                $resultat =$resultat."<article><img><a>".$produit->nom."</a></article>";
+            }
+            
+         
+         $resultat=$resultat."</section>";
+         return $resultat;        
+         
+     }
     
     public function renderBody($selector){
 
@@ -69,11 +75,11 @@ class ClientView extends \mf\view\AbstractView {
          */
         $header = $this->renderHeader();
         $footer = $this->renderFooter();
-        if($selector == 'Home'){
-            $section = $this->renderHome();
-        }// }if($selector == 'checklogin'){
-        //     $section = $this->();
-        // }
+        if($selector == 'Categorie'){
+            $section = $this->renderCategorie();
+        }if($selector == 'Produit'){
+            $section = $this->renderProduit();
+        }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
 
