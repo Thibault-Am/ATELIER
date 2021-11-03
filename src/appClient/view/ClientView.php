@@ -39,7 +39,8 @@ class ClientView extends \mf\view\AbstractView {
     
     private function renderCategorie(){
        $resultat="<section id='categorie'>";
-       $router = new \mf\router\Router();  
+       $router = new \mf\router\Router();
+
             foreach($this->data as $cat){
                 $resultat =$resultat."<article><img src='$cat->Image'/><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
             }
