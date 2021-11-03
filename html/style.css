@@ -1,4 +1,13 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: cadetblue;
+  padding: 0 2em;
+}
+
 @media screen and (min-width: 1000px) {
+
   section.categorie {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

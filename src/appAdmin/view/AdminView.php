@@ -21,9 +21,9 @@ class AdminView extends \mf\view\AbstractView {
         if (!empty($_SESSION['user_login'])){//menu connecté
             $router = new \mf\router\Router();
             $res="<a href='".$router->urlFor('logout')."'>Logout</img></a>";
-            return $res;
+            return "<h1>LeHangar - Gestion</h1>".$res;
         }
-        return "<h1>LeHangar - Gestion</h1> ";
+        return "<h1>LeHangar - Gestion</h1>";
         
     }
     
@@ -105,10 +105,8 @@ class AdminView extends \mf\view\AbstractView {
             echo $usr->id;
             $resultat="";
             $resultat= $resultat."Producteur</div>";
-            $resultat=$resultat."<article><a href=".$router->urlFor('commandes', ['id_producteur'=>$usr->id]).">Mes commandes</a></article>";
+            $resultat=$resultat."<article><a href=".$router->urlFor('commandes', ['id_producteur'=>$usr->id]).">Mes commandes</a></article><article><a href=".$router->urlFor('produits', ['id_producteur'=>$usr->id]).">Mes produits</a></article>";
         }
-
-
         return $resultat;
     }
     public function renderHomeGerant(){
