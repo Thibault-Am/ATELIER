@@ -41,22 +41,32 @@ class AdminController extends \mf\control\AbstractController {
         $vue= new \appAdmin\view\AdminView(null);
         return $vue->render('HomeProducteur');
     }
+    public function viewGerantHome(){
+        $vue= new \appAdmin\view\AdminView(null);
+        return $vue->render('HomeGerant');
+    }
 
     public function checkLogin(){
         // echo "test";
         $username=$_POST['user_name'];
         $mdp=$_POST['password'];
         $auth=new \appAdmin\auth\AdminAuthentification;
-        // echo $username;
+
         $auth->loginUser($username, $mdp);
+
 
         //Vérification incorrect
         //header("Location: ".$router->urlFor('login'));
     }
 
+    public function log_out(){
+        $auth=new  \mf\auth\Authentification;
+        $auth->logout();
+        \mf\router\Router::executeRoute('login');
+    }
+
     public function viewCommandes(){
         $vue= new \appAdmin\view\AdminView(null);
-        echo"test";
         return $vue->render('Commandes');
     }
 }
