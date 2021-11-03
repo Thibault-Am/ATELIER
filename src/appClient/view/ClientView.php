@@ -19,7 +19,7 @@ class ClientView extends \mf\view\AbstractView {
     public function renderHeader(){
        
         
-        return "<h1>LeHangar</h1> ";
+        return "<h1>LeHangar.local</h1> <a href='..'><img src='../../html/img/panier.jpg'/></a> ";
         
     }
     
@@ -39,10 +39,9 @@ class ClientView extends \mf\view\AbstractView {
     
     private function renderCategorie(){
        $resultat="<section id='categorie'>";
-       $router = new \mf\router\Router();
-
+       $router = new \mf\router\Router();  
             foreach($this->data as $cat){
-                $resultat =$resultat."<article><img src='$cat->Image'/><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
+                $resultat =$resultat."<article><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id])."><img src='$cat->Image'/><div class=\"centered\">".$cat->Nom."</div></a></article>";
             }
            
         
@@ -59,10 +58,10 @@ class ClientView extends \mf\view\AbstractView {
         $router = new \mf\router\Router();  
              //var_dump($categorie);
              foreach($this->data as $produit){
-               // $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
-               $id_producteur=1;
-                $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur/*->ID_PRODUCTEUR*/)->first();
-                $resultat =$resultat."<article><img src=".$produit->Image."/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
+                $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
+        
+                $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
+                $resultat =$resultat."<article><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
                 $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number'/><button type='submit'> AJOUTER AU PANIER</button>"."</article>";
             }
             
@@ -71,15 +70,12 @@ class ClientView extends \mf\view\AbstractView {
          return $resultat;        
          
      }
-
-
      private function renderUser(){
         $router = new \mf\router\Router();
         $resultat="<div>".$user->Nom."</div>";
         $resultat=$resultat."test"."</div>";
         return $resultat;
      }
-    
     public function renderBody($selector){
 
         /*
@@ -98,7 +94,6 @@ class ClientView extends \mf\view\AbstractView {
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
 
-
     
 
 
@@ -111,3 +106,4 @@ class ClientView extends \mf\view\AbstractView {
 
     
 }
+
