@@ -112,14 +112,13 @@ class AdminView extends \mf\view\AbstractView {
 
     return $resultat;
 }
+    public function renderCommandes(){
+        $router = new \mf\router\Router();
+        $resultat="<div>";
+        $resultat= $resultat."Commandes</div>";
 
-
-
-
-
-
-
-
+        return $resultat;
+    }
 
 
 }
