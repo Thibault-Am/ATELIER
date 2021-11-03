@@ -98,6 +98,7 @@ class AdminView extends \mf\view\AbstractView {
         $resultat="<a>";
         $resultat= $resultat."Producteur</div>";
 
+
         return $resultat;
     }
 
