@@ -67,6 +67,7 @@ class AdminController extends \mf\control\AbstractController {
 
     public function viewCommandes(){
         $vue= new \appAdmin\view\AdminView(null);
+        echo"test";
         return $vue->render('Commandes');
     }
 }
