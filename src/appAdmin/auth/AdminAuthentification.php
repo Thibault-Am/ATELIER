@@ -27,7 +27,7 @@ class AdminAuthentification extends \mf\auth\Authentification {
 
 
     public function loginUser($username, $password){
-        $obj=\appAdmin\model\User::where('username' ,'=', $username)->get('username');
+        $obj=\appAdmin\model\User::where('Mail' ,'=', $username)->get('Mail');
         if (!$obj->count()){
             $emess = "l'utilisateur $username n'existe pas";
 
@@ -35,9 +35,9 @@ class AdminAuthentification extends \mf\auth\Authentification {
             throw new \mf\auth\exception\AuthentificationException($emess);
             // return($emess);
         }else{
-            $user=\tweeterapp\model\User::where('username' ,'=', $username)->first();
-            $this->login($username, $user->password, $password, $user->level);
-            $vue=new \tweeterapp\control\AdminController;
+            $user=\appAdmin\model\User::where('mail' ,'=', $username)->first();
+            $this->login($username, $user->Password, $password, $user->level);
+            $vue=new \appAdmin\control\AdminController;
             $vue->viewHome();
         }
     }
