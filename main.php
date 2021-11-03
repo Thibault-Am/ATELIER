@@ -39,4 +39,5 @@ $router->addRoute('logout',
     '/logout/',
     '\appAdmin\control\AdminController',
     'log_out');
+$router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes');
 $router->run();
