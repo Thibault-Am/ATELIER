@@ -24,6 +24,6 @@ $router = new \mf\router\Router();
 
 ////////////////////////////application client///////////////////////////////////
 
-$router->addRoute('categorie','/categorie/','\appClient\control\clientController','viewCategorie');
-$router->addRoute('produits','/produits/','\appClient\control\clientController','viewProduit');
+$router->addRoute('categorie','/categorie/','\appClient\control\ClientController','viewCategorie');
+$router->addRoute('produits','/produits/','\appClient\control\ClientController','viewProduit');
 $router->run();
