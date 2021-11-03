@@ -33,12 +33,12 @@ class AdminAuthentification extends \mf\auth\Authentification {
 
             \mf\router\Router::executeRoute('login');
             throw new \mf\auth\exception\AuthentificationException($emess);
-            // return($emess);
+
         }else{
             $user=\appAdmin\model\User::where('mail' ,'=', $username)->first();
             $this->login($username, $user->Password, $password, $user->level);
             $vue=new \appAdmin\control\AdminController;
-            $vue->viewHome();
+            $vue->viewProducteurHome();
         }
     }
 }

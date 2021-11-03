@@ -37,6 +37,10 @@ class AdminController extends \mf\control\AbstractController {
         $vue= new \appAdmin\view\AdminView(null);
         return $vue->render('Login');
     }
+    public function viewProducteurHome(){
+        $vue= new \appAdmin\view\AdminView(null);
+        return $vue->render('HomeProducteur');
+    }
 
     public function checkLogin(){
         // echo "test";
