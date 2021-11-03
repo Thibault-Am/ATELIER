@@ -35,5 +35,8 @@ $router->addRoute('checklogin',
     '/checklogin/',
     '\appAdmin\control\AdminController',
     'checkLogin');
-$router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes');
+$router->addRoute('logout',
+    '/logout/',
+    '\appAdmin\control\AdminController',
+    'log_out');
 $router->run();
