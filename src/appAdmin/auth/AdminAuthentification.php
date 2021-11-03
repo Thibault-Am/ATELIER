@@ -38,7 +38,13 @@ class AdminAuthentification extends \mf\auth\Authentification {
             $user=\appAdmin\model\User::where('mail' ,'=', $username)->first();
             $this->login($username, $user->Password, $password, $user->level);
             $vue=new \appAdmin\control\AdminController;
-            $vue->viewProducteurHome();
+            if ($user->Role == 'Producteur'){
+                $vue->viewProducteurHome();
+            }
+            if ($user->Role == 'Gerant'){
+                $vue->viewGerantHome();
+            }
+
         }
     }
 }

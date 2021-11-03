@@ -94,7 +94,7 @@ class AdminView extends \mf\view\AbstractView {
     public function renderHomeProducteur(){
         $router = new \mf\router\Router();
         $resultat="<a>";
-        $resultat= $resultat."oui</div>";
+        $resultat= $resultat."Producteur</div>";
 
         return $resultat;
     }
