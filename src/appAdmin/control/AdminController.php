@@ -38,7 +38,9 @@ class AdminController extends \mf\control\AbstractController {
         return $vue->render('Login');
     }
     public function viewProducteurHome(){
-        $vue= new \appAdmin\view\AdminView(null);
+        $user = \appAdmin\model\User::where('Mail','=',$_SESSION['user_login']);
+        $ligne = $user->get();
+        $vue= new \appAdmin\view\AdminView($ligne);
         return $vue->render('HomeProducteur');
     }
     public function viewGerantHome(){

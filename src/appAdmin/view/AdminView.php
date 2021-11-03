@@ -79,6 +79,8 @@ class AdminView extends \mf\view\AbstractView {
            $section = $this->renderHomeProducteur();
          }if($selector == 'HomeGerant'){
            $section = $this->renderHomeGerant();
+         }if($selector == 'Commandes'){
+           $section = $this->renderCommandes();
          }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
@@ -99,9 +101,13 @@ class AdminView extends \mf\view\AbstractView {
 
     public function renderHomeProducteur(){
         $router = new \mf\router\Router();
-        var_dump($this->data);
-        $resultat="<a>";
-        $resultat= $resultat."Producteur</div>";
+        foreach ($this->data as $usr){
+            echo $usr->id;
+            $resultat="";
+            $resultat= $resultat."Producteur</div>";
+            $resultat=$resultat."<article><a href=".$router->urlFor('commandes', ['id_producteur'=>$usr->id]).">Mes commandes</a></article>";
+        }
+
 
         return $resultat;
     }
