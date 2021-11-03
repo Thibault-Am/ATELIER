@@ -79,7 +79,9 @@ class AdminView extends \mf\view\AbstractView {
            $section = $this->renderHomeProducteur();
          }if($selector == 'HomeGerant'){
            $section = $this->renderHomeGerant();
-         }
+         }if($selector == 'HomeCommandes'){
+            $section = $this->renderCommandes();
+        }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
 
