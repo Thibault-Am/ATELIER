@@ -25,11 +25,19 @@ class ClientController extends \mf\control\AbstractController {
      * 
      */
     
-    public function viewHome(){
+    public function viewCategorie(){
 
         $categorie = \appClient\model\Categorie::select();
         $lignes = $categorie->get(); 
         $vues = new \appClient\view\ClientView($lignes);
-        return $vues->render('Home');
+        return $vues->render('Categorie');
         }
+
+    public function viewProduit(){
+        $id_categorie=$_GET['id_categorie'];
+        $produits = \appClient\model\Produits::where('ID_categorie',"=",$id_categorie);
+        $lignes = $produits->get(); 
+        $vues = new \appClient\view\ClientView($lignes);
+        return $vues->render('Produit');
+    }
 }
