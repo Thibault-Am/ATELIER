@@ -44,10 +44,8 @@ $router->addRoute('logout',
     '\appAdmin\control\AdminController',
     'log_out',
     \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
-$router->addRoute('commandes',
-    '/commandes/',
-    '\appAdmin\control\AdminController',
-    'viewCommandes',
+$router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes',
     \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
+$router->addRoute('user','/user/','\appClient\control\clientController','viewUser');
 $router->setDefaultRoute('/categorie/');
 $router->run();

@@ -40,4 +40,10 @@ class clientController extends \mf\control\AbstractController {
         $vues = new \appClient\view\ClientView($lignes);
         return $vues->render('Produit');
     }
+
+    public function viewUser(){ 
+        $vues = new \appClient\view\ClientView(null);
+        echo "test";
+        return $vues->render('User');
+    }
 }
