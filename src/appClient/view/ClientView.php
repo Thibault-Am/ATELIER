@@ -42,7 +42,7 @@ class ClientView extends \mf\view\AbstractView {
        $router = new \mf\router\Router();  
             //var_dump($categorie);
             foreach($this->data as $cat){
-                $resultat =$resultat."<article><img src='$cat->image'/></article><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
+                $resultat =$resultat."<article><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
             }
            
         
