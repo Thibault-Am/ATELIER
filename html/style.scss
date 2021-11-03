@@ -1,4 +1,5 @@
 
+
 @mixin grid_l{
     display: grid;
     grid-template-columns : repeat(4, 1fr);
@@ -20,17 +21,26 @@
     grid-auto-flow: row;  
     grid-gap: 10px;
 }
+section#categorie>article>a>img{
+    width: 100%;
+    height: 100%;
+}
+
+a:link{
+  text-decoration: none;
+}
+section#produit>article>img{
+    grid-column: 1/3 ;
+    grid-row: 1/2;
+    height: 200px;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: cadetblue;
     padding: 0 2em;
-}
-section#produit>article>img{
-    grid-column: 1/3 ;
-    grid-row: 1/2;
-    height: 200px;
 }
 section#produit>article{
     display: grid;
@@ -40,13 +50,16 @@ section#produit>article{
     border: 1px solid black;
     padding: auto;
     margin: auto;
-    color: rebeccapurple;
+}
+section#produit>article>img{
+    width:40%;
+    height: auto;
 }
 section#produit>article>div{
     grid-column: 3/5 ;
     grid-row: 1;
 }
-section#produit>article>div{
+section#produit>article>span{
     grid-column: 5/6 ;
     grid-row: 1;
 }
@@ -58,19 +71,23 @@ section#produit>article>button{
     grid-column: 5/6 ;
     grid-row: 2;
 }
-
-section#produit>article>button{
-    grid-column: 5/6 ;
-    grid-row: 2;
-}
 @media screen and (min-width:1000px) {
     section#categorie{
         @include grid_l;
     }
+    .centered {
+        position: relative;
+        top: -80%;
+        left: 10%;
+        color: brown;
+        font-size: 30px;
+        font-weight: bold;
+      }
     section#categorie article{
+        
         box-sizing: border-box;
         border: 1px solid black;
-        height: 500;
+        height: auto;
 
     }
     section#categorie article:first-child{
@@ -111,11 +128,19 @@ section#produit>article>button{
     section#categorie{
         @include grid_m;
     }
+    .centered {
+        position: relative;
+        top: -80%;
+        left: 10%;
+        color: brown;
+        font-size: 30px;
+        font-weight: bold;
+      }
 
     section#categorie article{
         box-sizing: border-box;
         border: 1px solid black;
-        height: 500;
+        height: auto;
 
     }
     section#categorie article:first-child{
@@ -155,11 +180,18 @@ section#produit>article>button{
     section#categorie{
         @include grid_s;
     }
-
+    .centered {
+        position: relative;
+        top: -80%;
+        left: 10%;
+        color: brown;
+        font-size: 30px;
+        font-weight: bold;
+      }
     section#categorie article{
         box-sizing: border-box;
         border: 1px solid black;
-        height: 500;
+        height: auto;
 
     }
     section#categorie article:first-child{
