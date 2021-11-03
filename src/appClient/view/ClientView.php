@@ -70,6 +70,14 @@ class ClientView extends \mf\view\AbstractView {
          return $resultat;        
          
      }
+
+
+     private function renderUser(){
+        $router = new \mf\router\Router();
+        $resultat="<div>".$user->Nom."</div>";
+        $resultat=$resultat."test"."</div>";
+        return $resultat;
+     }
     
     public function renderBody($selector){
 
@@ -83,9 +91,12 @@ class ClientView extends \mf\view\AbstractView {
             $section = $this->renderCategorie();
         }if($selector == 'Produit'){
             $section = $this->renderProduit();
+        }if($selector == 'User'){
+            $section = $this->renderUser();
         }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
+
 
     
 
