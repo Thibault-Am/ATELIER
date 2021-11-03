@@ -17,8 +17,12 @@ class AdminView extends \mf\view\AbstractView {
      *  Retourne le fragment HTML de l'entête (unique pour toutes les vues)
      */ 
     public function renderHeader(){
-       
-        
+        print_r($_SESSION);
+        if (!empty($_SESSION['user_login'])){//menu connecté
+            $router = new \mf\router\Router();
+            $res="<a href='".$router->urlFor('logout')."'>Logout</img></a>";
+            return $res;
+        }
         return "<h1>LeHangar - Gestion</h1> ";
         
     }
@@ -73,6 +77,8 @@ class AdminView extends \mf\view\AbstractView {
             $section = $this->renderLogin();
         } if($selector == 'HomeProducteur'){
            $section = $this->renderHomeProducteur();
+         }if($selector == 'HomeGerant'){
+           $section = $this->renderHomeGerant();
          }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
@@ -93,11 +99,19 @@ class AdminView extends \mf\view\AbstractView {
 
     public function renderHomeProducteur(){
         $router = new \mf\router\Router();
+        var_dump($this->data);
         $resultat="<a>";
         $resultat= $resultat."Producteur</div>";
 
         return $resultat;
     }
+    public function renderHomeGerant(){
+    $router = new \mf\router\Router();
+    $resultat="<div>";
+    $resultat= $resultat."GÉRANT</div>";
+
+    return $resultat;
+}
 
 
 

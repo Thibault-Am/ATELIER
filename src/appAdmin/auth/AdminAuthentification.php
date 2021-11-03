@@ -19,8 +19,9 @@ class AdminAuthentification extends \mf\auth\Authentification {
      * Ne pas oublier le niveau NONE un utilisateur non inscrit est hérité 
      * depuis AbstractAuthentification 
      */
-    const ACCESS_LEVEL_USER  = 100;
-    const ACCESS_LEVEL_ADMIN = 200;
+    const ACCESS_LEVEL_NONE = 0;
+    const ACCESS_LEVEL_USER  = 1;
+    const ACCESS_LEVEL_ADMIN = 2;
     public function __construct(){
         parent::__construct();
     }
@@ -35,10 +36,12 @@ class AdminAuthentification extends \mf\auth\Authentification {
             throw new \mf\auth\exception\AuthentificationException($emess);
 
         }else{
-            $user=\appAdmin\model\User::where('mail' ,'=', $username)->first();
-            $this->login($username, $user->Password, $password, $user->level);
+            $user=\appAdmin\model\User::where('Mail' ,'=', $username)->first();
+            $this->login($username, $user->Password, $password, $user->Level);
             $vue=new \appAdmin\control\AdminController;
+            echo $user->level;
             if ($user->Role == 'Producteur'){
+
                 $vue->viewProducteurHome();
             }
             if ($user->Role == 'Gerant'){
