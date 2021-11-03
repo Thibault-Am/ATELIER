@@ -24,7 +24,11 @@ $router = new \mf\router\Router();
 
 ////////////////////////////application client///////////////////////////////////
 
-$router->addRoute('categorie','/categorie/','\appClient\control\clientController','viewCategorie',\appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('categorie',
+    '/categorie/',
+    '\appClient\control\clientController',
+    'viewCategorie',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
 $router->addRoute('produits','/produits/','\appClient\control\clientController','viewProduit',
     \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
 $router->addRoute('login','/login/','\appAdmin\control\AdminController','viewLogin',
@@ -46,6 +50,6 @@ $router->addRoute('logout',
     \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
 $router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes',
     \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
-$router->addRoute('user','/user/','\appClient\control\clientController','viewUser');
+$router->addRoute('user','/user/','\appClient\control\clientController','viewUser',\appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
 $router->setDefaultRoute('/categorie/');
 $router->run();
