@@ -2,7 +2,7 @@
 
 namespace appClient\control;
 
-class ClientController extends \mf\control\AbstractController {
+class clientController extends \mf\control\AbstractController {
 
 
     /* Constructeur :
