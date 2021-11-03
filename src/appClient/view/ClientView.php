@@ -38,11 +38,11 @@ class ClientView extends \mf\view\AbstractView {
      */
     
     private function renderCategorie(){
-       $resultat="<section class='categorie'>";
+       $resultat="<section id='categorie'>";
        $router = new \mf\router\Router();  
             //var_dump($categorie);
             foreach($this->data as $cat){
-                $resultat =$resultat."<article><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
+                $resultat =$resultat."<article><img src='$cat->Image'/><a href=".$router->urlFor('produits', ['id_categorie'=>$cat->id]).">".$cat->Nom."</a></article>";
             }
            
         
@@ -54,11 +54,16 @@ class ClientView extends \mf\view\AbstractView {
     private function renderProduit(){
         $id_categorie=$_GET['id_categorie'];
         $categorie=\appClient\model\Categorie::where('id',"=",$id_categorie)->first();
-        $resultat="<section class='produit'> <h1>$categorie->Nom</h1>";
+        $resultat="<section id='produit'> <h1>$categorie->Nom</h1>";
+        
         $router = new \mf\router\Router();  
              //var_dump($categorie);
              foreach($this->data as $produit){
-                $resultat =$resultat."<article><img><a>".$produit->nom."</a></article>";
+               // $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
+               $id_producteur=1;
+                $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur/*->ID_PRODUCTEUR*/)->first();
+                $resultat =$resultat."<article><img src=".$produit->Image."/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
+                $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number'/><button type='submit'> AJOUTER AU PANIER</button>"."</article>";
             }
             
          
