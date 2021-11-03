@@ -1,5 +1,5 @@
 <?php
-namespace appClient\model;
+namespace appAdmin\model;
 
 class Produits extends \Illuminate\Database\Eloquent\Model {
 

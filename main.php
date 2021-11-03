@@ -26,4 +26,9 @@ $router = new \mf\router\Router();
 
 $router->addRoute('categorie','/categorie/','\appClient\control\clientController','viewCategorie');
 $router->addRoute('produits','/produits/','\appClient\control\clientController','viewProduit');
+$router->addRoute('login','/login/','\appAdmin\control\AdminController','viewLogin');
+$router->addRoute('checklogin',
+    '/checklogin/',
+    '\appAdmin\control\AdminController',
+    'checkLogin');
 $router->run();
