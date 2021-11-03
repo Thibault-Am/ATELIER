@@ -79,7 +79,7 @@ class AdminView extends \mf\view\AbstractView {
            $section = $this->renderHomeProducteur();
          }if($selector == 'HomeGerant'){
            $section = $this->renderHomeGerant();
-         }if($selector == 'Commandes'){
+         }if($selector == 'HomeCommandes'){
             $section = $this->renderCommandes();
         }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
@@ -118,7 +118,6 @@ class AdminView extends \mf\view\AbstractView {
         $router = new \mf\router\Router();
         $resultat="<div>";
         $resultat= $resultat."Commandes</div>";
-        $resultat= $this->data->
 
         return $resultat;
     }

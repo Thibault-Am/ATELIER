@@ -20,6 +20,13 @@
     grid-auto-flow: row;  
     grid-gap: 10px;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: cadetblue;
+    padding: 0 2em;
+}
 section#produit>article>img{
     grid-column: 1/3 ;
     grid-row: 1/2;

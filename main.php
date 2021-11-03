@@ -24,21 +24,28 @@ $router = new \mf\router\Router();
 
 ////////////////////////////application client///////////////////////////////////
 
-$router->addRoute('categorie','/categorie/','\appClient\control\clientController','viewCategorie');
-$router->addRoute('produits','/produits/','\appClient\control\clientController','viewProduit');
-$router->addRoute('login','/login/','\appAdmin\control\AdminController','viewLogin');
+$router->addRoute('categorie','/categorie/','\appClient\control\clientController','viewCategorie',\appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('produits','/produits/','\appClient\control\clientController','viewProduit',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('login','/login/','\appAdmin\control\AdminController','viewLogin',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
 $router->addRoute('checklogin',
     '/checklogin/',
     '\appAdmin\control\AdminController',
-    'checkLogin');
-$router->addRoute('checklogin',
-    '/checklogin/',
+    'checkLogin',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('homeProducteur',
+    '/homeProducteur/',
     '\appAdmin\control\AdminController',
-    'checkLogin');
+    'viewProducteurHome',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
 $router->addRoute('logout',
     '/logout/',
     '\appAdmin\control\AdminController',
-    'log_out');
-$router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes');
+    'log_out',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
+$router->addRoute('commandes','/commandes/','\appAdmin\control\AdminController','viewCommandes',
+    \appAdmin\auth\AdminAuthentification::ACCESS_LEVEL_USER);
 $router->addRoute('user','/user/','\appClient\control\clientController','viewUser');
+$router->setDefaultRoute('/categorie/');
 $router->run();
