@@ -49,4 +49,9 @@ class AdminController extends \mf\control\AbstractController {
         //Vérification incorrect
         //header("Location: ".$router->urlFor('login'));
     }
+
+    public function viewCommandes(){
+        $vue= new \appAdmin\view\AdminView(null);
+        return $vue->render('Commandes');
+    }
 }
