@@ -19,11 +19,15 @@ class ClientView extends \mf\view\AbstractView {
     public function renderHeader(){
         $router = new \mf\router\Router();  
         $resultat="<h1>LeHangar.local</h1>";
-        if (!empty($_SESSION['client_name'])){
-            $resultat=$resultat."<a href='".$router->urlFor('panier')."'><img src='../../html/img/panier.jpg'/></a> ";
+        if(empty($_SESSION['panier'])){
+            $resultat=$resultat."<a href='".$router->urlFor('setPanier')."'><img class='panier' src='../../html/img/panier.jpg'/></a>
+            <a href='".$router->urlFor('categorie')."'>Catégorie</a> ";
         }else{
-            $resultat=$resultat."<a href='".$router->urlFor('panier',['nom_client'=>$_SESSION['client_name']])."'><img src='../../html/img/panier.jpg'/></a> ";
+            $resultat=$resultat."<a href='".$router->urlFor('panier')."'><img class='panier' src='../../html/img/panier.jpg'/></a>
+            <a href='".$router->urlFor('categorie')."'>Catégorie</a>  ";
         }
+        
+       
          
         return $resultat;
     }
@@ -66,8 +70,8 @@ class ClientView extends \mf\view\AbstractView {
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
         
                 $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
-                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier', ['id_produit'=>$produit->id])."'><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
-                $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number' min='0'/><button type='submit'> AJOUTER AU PANIER</button></form>"."</article>";
+                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
+                $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
             }
             
          
@@ -84,7 +88,6 @@ class ClientView extends \mf\view\AbstractView {
             <h1>Producteur</h1><h2>".$this->data->Nom."</h2>
             <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT.
         "</div>
-
         <div><h1>Description</h1>".$this->data->Description.
         
         "</div>";
@@ -113,17 +116,33 @@ class ClientView extends \mf\view\AbstractView {
      }
      private function renderPanier(){
         $router = new \mf\router\Router();
-         if ($_SESSION['client_name']==null){
-            $resultat="<form action='".$router->urlFor('setClient')."'>
-            <label for='name'>Votre nom:</label><input name='name' type='text'/>
-            <label for='mail'>Votre mail:</label><input name='mail' type='text'/>
-            <label for='tel'>Votre Tel:</label><input name 'tel' type='text'/>
-            <button type='submit'>Créer mon panier</button></form>";
-         }else{
-            $resultat=$_SESSION['client_name'];
-         }
-        
-        
+        $resultat="<section id='panier'>";
+        print_r($_SESSION['panier']);
+        $montant_cumul;
+        foreach($_SESSION['panier'] as $tab_produit){
+            foreach($tab_produit as $id_produit=>$quantite){
+                $produit=\appClient\model\Produits::where('id',"=",$id_produit)->first();
+                $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
+                $producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
+                $resultat=$resultat."<div><img src='".$produit->Image."'/>
+                <span><h1>Produit :</h1><h2>".$produit->nom."</h2></span>
+                <span><h1>Quantité :</h1><h2>".$quantite."</h2></span>
+                <span><h1>Tarif pour $quantite lot(s) ".$produit->nom."(s) :</h1><h2>".$produit->tarif_unitaire*$quantite.".00€</h2></span>
+                <span><h1>Producteur :</h1><h2>$producteur->Nom</h2></span>
+                
+                </div>";
+                $montant_cumul=$montant_cumul+($produit->tarif_unitaire*$quantite);
+            }
+        }
+        $resultat=$resultat."<form action='".$router->urlFor('validationPanier')."'>
+        <h1>VALIDATION DE LA COMANDE</h1></br>
+        <input type='text' name='nom' placeholder='Nom'/>
+        <input type='text' name='mail' placeholder='Mail'/>
+        <input type='text' name='tel' placeholder='Tel'/>
+        <label for='montant'>Montant Total :</label>
+        <input type='text' name='montant' readonly value='".$montant_cumul."'/> ";
+       $resultat=$resultat."<button type='submit'>Valider mon panier</button>
+       </form></section>";
         return $resultat;
      }
     public function renderBody($selector){
