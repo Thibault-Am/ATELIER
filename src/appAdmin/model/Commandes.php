@@ -9,3 +9,4 @@ class Commandes extends xtends \Illuminate\Database\Eloquent\Model {
                                      les deux colonnes updated_at,
                                      created_at */
 }
+?>
