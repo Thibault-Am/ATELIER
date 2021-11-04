@@ -1,78 +1,90 @@
+@mixin grid_l {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
 
+@mixin grid_m {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+}
 
-@mixin grid_l{
+@mixin grid_s {
     display: grid;
-    grid-template-columns : repeat(4, 1fr);
-    grid-template-rows: auto;  
-    grid-auto-flow: row;  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
     grid-gap: 10px;
 }
-@mixin grid_m{
-    display: grid;
-    grid-template-columns : repeat(3, 1fr);
-    grid-template-rows: auto;  
-    grid-auto-flow: row;  
-    grid-gap: 10px;
-}
-@mixin grid_s{
-    display: grid;
-    grid-template-columns : repeat(2, 1fr);
-    grid-template-rows: auto;  
-    grid-auto-flow: row;  
-    grid-gap: 10px;
-}
-section#categorie>article>a>img{
+
+section#categorie>article>a>img {
     width: 100%;
     height: 100%;
 }
 
-a:link{
-  text-decoration: none;
+a:link {
+    text-decoration: none;
 }
-section#produit>article>form>img{
-    grid-column: 1/3 ;
+
+section#produit>article>form>img {
+    grid-column: 1/3;
     grid-row: 1/2;
     height: 200px;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: cadetblue;
     padding: 0 2em;
 }
-section#produit>article{
+
+section#produit>article {
     display: grid;
-    grid-template-columns : repeat(5, 1fr);
-    grid-template-rows: auto;  
-    grid-auto-flow: row;  
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
     border: 1px solid black;
     padding: auto;
     margin: auto;
 }
-section#produit>article>form>img{
-    width:40%;
+
+section#produit>article>form>img {
+    width: 40%;
     height: auto;
 }
-section#produit>article>form>div{
-    grid-column: 3/5 ;
+
+section#produit>article>form>div {
+    grid-column: 3/5;
     grid-row: 1;
 }
-section#produit>article>form>span{
-    grid-column: 5/6 ;
+
+section#produit>article>form>span {
+    grid-column: 5/6;
     grid-row: 1;
 }
-section#produit>article>form>input{
-    grid-column: 4/5 ;
+
+section#produit>article>form>input {
+    grid-column: 4/5;
     grid-row: 2;
 }
-section#produit>article>form>button{
-    grid-column: 5/6 ;
+
+section#produit>article>form>button {
+    grid-column: 5/6;
     grid-row: 2;
 }
+
 @media screen and (min-width:1000px) {
-    section#categorie{
+    section#categorie {
+        @include grid_l;
+    }
+    section#Producteur article {
         @include grid_l;
     }
     .centered {
@@ -82,50 +94,112 @@ section#produit>article>form>button{
         color: brown;
         font-size: 30px;
         font-weight: bold;
-      }
-    section#categorie article{
-        
+    }
+    section#Producteur article {
+        box-sizing: border-box;
+        border: 1px solid black;
+        &>div:nth-child(1) {
+            //Producteur
+            grid-column: 1/2;
+            grid-row: 1;
+            border: 1px solid black;
+            height: 30%;
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 10px;
+                text-align: center;
+            }
+            img {
+                height: 70%;
+            }
+        }
+        &>div:nth-child(2) {
+            //description
+            grid-column: 3/4;
+            grid-row: 1;
+            border: 2px solid black;
+            height: 30%;
+        }
+        &>div:nth-child(3) {
+            //Image1
+            grid-column: 1/2;
+            grid-row: 2;
+            border: blue solid 2px;
+            img {
+                max-width: 100px;
+            }
+        }
+        &>div:nth-child(4) {
+            //Image2
+            grid-column: 2/3;
+            grid-row: 2;
+            border: blue solid 2px;
+            img {
+                max-width: 100px;
+            }
+        }
+        &>div:nth-child(5) {
+            //Image3
+            grid-column: 3/4;
+            grid-row: 2;
+            border: blue solid 2px;
+            img {
+                max-width: 100px;
+            }
+        }
+        &>div:nth-child(6) {
+            //Image4
+            grid-column: 4/5;
+            grid-row: 2;
+            border: blue solid 2px;
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+    section#categorie article {
         box-sizing: border-box;
         border: 1px solid black;
         height: auto;
-
     }
-    section#categorie article:first-child{
+    section#categorie article:first-child {
         grid-column: 1/2;
         grid-row: 1;
     }
-    section#categorie article:nth-child(2){
+    section#categorie article:nth-child(2) {
         grid-column: 2/3;
         grid-row: 1;
     }
-    section#categorie article:nth-child(3){
+    section#categorie article:nth-child(3) {
         grid-column: 3/4;
         grid-row: 1;
     }
-    section#categorie article:nth-child(4){
+    section#categorie article:nth-child(4) {
         grid-column: 4/5;
         grid-row: 1;
     }
-    section#categorie article:nth-child(5){
+    section#categorie article:nth-child(5) {
         grid-column: 1/2;
         grid-row: 2;
     }
-    section#categorie article:nth-child(6){
+    section#categorie article:nth-child(6) {
         grid-column: 2/3;
         grid-row: 2;
     }
-    section#categorie article:nth-child(7){
+    section#categorie article:nth-child(7) {
         grid-column: 3/4;
         grid-row: 2;
     }
-    section#categorie article:nth-child(8){
+    section#categorie article:nth-child(8) {
         grid-column: 4/5;
         grid-row: 2;
     }
-
 }
+
 @media screen and (min-width:600px) and (max-width:999px) {
-    section#categorie{
+    section#categorie {
         @include grid_m;
     }
     .centered {
@@ -135,49 +209,48 @@ section#produit>article>form>button{
         color: brown;
         font-size: 30px;
         font-weight: bold;
-      }
-
-    section#categorie article{
+    }
+    section#categorie article {
         box-sizing: border-box;
         border: 1px solid black;
         height: auto;
-
     }
-    section#categorie article:first-child{
+    section#categorie article:first-child {
         grid-column: 1/2;
         grid-row: 1;
     }
-    section#categorie article:nth-child(2){
+    section#categorie article:nth-child(2) {
         grid-column: 2/3;
         grid-row: 1;
     }
-    section#categorie article:nth-child(3){
+    section#categorie article:nth-child(3) {
         grid-column: 3/4;
         grid-row: 1;
     }
-    section#categorie article:nth-child(4){
+    section#categorie article:nth-child(4) {
         grid-column: 1/2;
         grid-row: 2;
     }
-    section#categorie article:nth-child(5){
+    section#categorie article:nth-child(5) {
         grid-column: 2/3;
         grid-row: 2;
     }
-    section#categorie article:nth-child(6){
+    section#categorie article:nth-child(6) {
         grid-column: 3/4;
         grid-row: 2;
     }
-    section#categorie article:nth-child(7){
+    section#categorie article:nth-child(7) {
         grid-column: 1/2;
         grid-row: 3;
     }
-    section#categorie article:nth-child(8){
+    section#categorie article:nth-child(8) {
         grid-column: 2/3;
         grid-row: 3;
     }
 }
-@media screen and (max-width:599px){
-    section#categorie{
+
+@media screen and (max-width:599px) {
+    section#categorie {
         @include grid_s;
     }
     .centered {
@@ -187,42 +260,41 @@ section#produit>article>form>button{
         color: brown;
         font-size: 30px;
         font-weight: bold;
-      }
-    section#categorie article{
+    }
+    section#categorie article {
         box-sizing: border-box;
         border: 1px solid black;
         height: auto;
-
     }
-    section#categorie article:first-child{
+    section#categorie article:first-child {
         grid-column: 1/2;
         grid-row: 1;
     }
-    section#categorie article:nth-child(2){
+    section#categorie article:nth-child(2) {
         grid-column: 2/3;
         grid-row: 1;
     }
-    section#categorie article:nth-child(3){
+    section#categorie article:nth-child(3) {
         grid-column: 1/2;
         grid-row: 2;
     }
-    section#categorie article:nth-child(4){
+    section#categorie article:nth-child(4) {
         grid-column: 2/3;
         grid-row: 2;
     }
-    section#categorie article:nth-child(5){
+    section#categorie article:nth-child(5) {
         grid-column: 1/2;
         grid-row: 3;
     }
-    section#categorie article:nth-child(6){
+    section#categorie article:nth-child(6) {
         grid-column: 2/3;
         grid-row: 3;
     }
-    section#categorie article:nth-child(7){
+    section#categorie article:nth-child(7) {
         grid-column: 1/2;
         grid-row: 4;
     }
-    section#categorie article:nth-child(8){
+    section#categorie article:nth-child(8) {
         grid-column: 2/3;
         grid-row: 4;
     }

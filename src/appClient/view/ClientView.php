@@ -78,9 +78,16 @@ class ClientView extends \mf\view\AbstractView {
      private function renderUser(){
         $router = new \mf\router\Router();
         //Affichage des infos du producteur
-        $resultat="<article><h1>Producteur</h1><div>".$this->data->Nom.
-        "<img src=".$this->data->image."/>".$this->data->ID_PRODUIT.
-        "</article><h1>Description</h1>".$this->data->Description."</div><br>";
+        $resultat="<section id='Producteur'>
+        <article>
+        <div>
+            <h1>Producteur</h1><h2>".$this->data->Nom."</h2>
+            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT.
+        "</div>
+
+        <div><h1>Description</h1>".$this->data->Description.
+        
+        "</div>";
     
        
 
@@ -91,12 +98,18 @@ class ClientView extends \mf\view\AbstractView {
         foreach($produits as $id_produit){  
             
             $produit=\appClient\model\Produits::where('id',"=",$id_produit->ID_PRODUIT)->first();  //recherche dans la table produit
-            $resultat="<section id='produitsProducteur'><h1>$produit->nom</h1><img src='".$produit->Image."'/></section>";
+
+            $resultat=
+            $resultat."<div><h2>$produit->nom</h2>
+            <img src='".$produit->Image."'
+            <h3>$produit->tarif_unitaire </h3></div>";
             
             
         }
-
+                $resultat=$resultat."</article></section>";
+        
         return $resultat;
+        
      }
      private function renderPanier(){
         $router = new \mf\router\Router();
