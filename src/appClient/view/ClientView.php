@@ -117,7 +117,6 @@ class ClientView extends \mf\view\AbstractView {
      private function renderPanier(){
         $router = new \mf\router\Router();
         $resultat="<section id='panier'>";
-        print_r($_SESSION['panier']);
         $montant_cumul;
         foreach($_SESSION['panier'] as $tab_produit){
             foreach($tab_produit as $id_produit=>$quantite){
@@ -142,9 +141,15 @@ class ClientView extends \mf\view\AbstractView {
         <label for='montant'>Montant Total :</label>
         <input type='text' name='montant' readonly value='".$montant_cumul."'/> ";
        $resultat=$resultat."<button type='submit'>Valider mon panier</button>
-       </form></section>";
+       </form><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></section>";
         return $resultat;
      }
+
+    public function renderannulationPanier(){
+        $router = new \mf\router\Router();
+        unset($_SESSION['panier']);
+        header("Location: ".$router->urlFor('categorie'));
+    }
     public function renderBody($selector){
 
         /*
@@ -161,6 +166,9 @@ class ClientView extends \mf\view\AbstractView {
             $section = $this->renderUser();
         }if($selector == 'Panier'){
             $section = $this->renderPanier();
+        }
+        if($selector == 'annulationPanier'){
+            $section = $this->renderannulationPanier();
         }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
