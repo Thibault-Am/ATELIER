@@ -50,4 +50,11 @@ class clientController extends \mf\control\AbstractController {
 
         
     }
+    public function viewPanier(){
+        $vues = new \appClient\view\ClientView(null);
+        return $vues->render('Panier');
+    }
+    public function setClient(){
+        echo $_GET['name'];
+    }
 }

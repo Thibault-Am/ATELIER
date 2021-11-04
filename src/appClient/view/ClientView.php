@@ -17,10 +17,15 @@ class ClientView extends \mf\view\AbstractView {
      *  Retourne le fragment HTML de l'entête (unique pour toutes les vues)
      */ 
     public function renderHeader(){
-       
-        
-        return "<h1>LeHangar.local</h1> <a href='..'><img src='../../html/img/panier.jpg'/></a> ";
-        
+        $router = new \mf\router\Router();  
+        $resultat="<h1>LeHangar.local</h1>";
+        if (!empty($_SESSION['client_name'])){
+            $resultat=$resultat."<a href='".$router->urlFor('panier')."'><img src='../../html/img/panier.jpg'/></a> ";
+        }else{
+            $resultat=$resultat."<a href='".$router->urlFor('panier',['nom_client'=>$_SESSION['client_name']])."'><img src='../../html/img/panier.jpg'/></a> ";
+        }
+         
+        return $resultat;
     }
     
     /* Méthode renderFooter
@@ -61,8 +66,8 @@ class ClientView extends \mf\view\AbstractView {
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
         
                 $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
-                $resultat =$resultat."<article><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
-                $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number'/><button type='submit'> AJOUTER AU PANIER</button>"."</article>";
+                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier', ['id_produit'=>$produit->id])."'><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
+                $resultat=$resultat."<span>".$produit->tarif_unitaire.".00€ </span><input type='number' min='0'/><button type='submit'> AJOUTER AU PANIER</button></form>"."</article>";
             }
             
          
@@ -73,6 +78,21 @@ class ClientView extends \mf\view\AbstractView {
      private function renderUser(){
         $router = new \mf\router\Router();
         $resultat="<article><h1>Producteur</h1><div>".$this->data->Nom."<div><img src=".$this->data->image."/></div></article> <div><h1>Description</h1>".$this->data->Description."</div></div><br>";
+        return $resultat;
+     }
+     private function renderPanier(){
+        $router = new \mf\router\Router();
+         if ($_SESSION['client_name']==null){
+            $resultat="<form action='".$router->urlFor('setClient')."'>
+            <label for='name'>Votre nom:</label><input name='name' type='text'/>
+            <label for='mail'>Votre mail:</label><input name='mail' type='text'/>
+            <label for='tel'>Votre Tel:</label><input name 'tel' type='text'/>
+            <button type='submit'>Créer mon panier</button></form>";
+         }else{
+            $resultat=$_SESSION['client_name'];
+         }
+        
+        
         return $resultat;
      }
     public function renderBody($selector){
@@ -89,6 +109,8 @@ class ClientView extends \mf\view\AbstractView {
             $section = $this->renderProduit();
         }if($selector == 'User'){
             $section = $this->renderUser();
+        }if($selector == 'Panier'){
+            $section = $this->renderPanier();
         }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }

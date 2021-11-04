@@ -29,7 +29,7 @@ section#categorie>article>a>img{
 a:link{
   text-decoration: none;
 }
-section#produit>article>img{
+section#produit>article>form>img{
     grid-column: 1/3 ;
     grid-row: 1/2;
     height: 200px;
@@ -51,23 +51,23 @@ section#produit>article{
     padding: auto;
     margin: auto;
 }
-section#produit>article>img{
+section#produit>article>form>img{
     width:40%;
     height: auto;
 }
-section#produit>article>div{
+section#produit>article>form>div{
     grid-column: 3/5 ;
     grid-row: 1;
 }
-section#produit>article>span{
+section#produit>article>form>span{
     grid-column: 5/6 ;
     grid-row: 1;
 }
-section#produit>article>input{
+section#produit>article>form>input{
     grid-column: 4/5 ;
     grid-row: 2;
 }
-section#produit>article>button{
+section#produit>article>form>button{
     grid-column: 5/6 ;
     grid-row: 2;
 }
