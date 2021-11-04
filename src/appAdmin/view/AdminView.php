@@ -118,8 +118,6 @@ class AdminView extends \mf\view\AbstractView {
         $router = new \mf\router\Router();
         $resultat="<div>";
         $resultat= $resultat."Commandes</div>";
-        $resultat =$this->data->produit;
-        return $resultat;
     }
 
 
