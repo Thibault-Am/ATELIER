@@ -42,8 +42,12 @@ class clientController extends \mf\control\AbstractController {
     }
 
     public function viewUser(){ 
-        $vues = new \appClient\view\ClientView(null);
-        echo "test";
+        $user = \appClient\model\User::where('id',"=",1);
+        $lignes=$user->first();
+        $vues = new \appClient\view\ClientView($lignes);
         return $vues->render('User');
+
+
+        
     }
 }

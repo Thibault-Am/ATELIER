@@ -74,8 +74,7 @@ class ClientView extends \mf\view\AbstractView {
 
      private function renderUser(){
         $router = new \mf\router\Router();
-        $resultat="<div>".$user->Nom."</div>";
-        $resultat=$resultat."test"."</div>";
+        $resultat="<article><h1>Producteur</h1><div>".$this->data->Nom."<div><img src=".$this->data->image."/></div></article> <div><h1>Description</h1>".$this->data->Description."</div></div><br>";
         return $resultat;
      }
     
