@@ -135,11 +135,11 @@ class ClientView extends \mf\view\AbstractView {
         }
         $resultat=$resultat."<form action='".$router->urlFor('validationPanier')."'>
         <h1>VALIDATION DE LA COMANDE</h1></br>
-        <input type='text' name='nom' placeholder='Nom'/>
-        <input type='text' name='mail' placeholder='Mail'/>
-        <input type='text' name='tel' placeholder='Tel'/>
+        <input type='text' required=required name='nom' placeholder='Nom'/>
+        <input type='text' required=required name='mail' placeholder='Mail'/>
+        <input type='text' required=required name='tel' placeholder='Tel'/>
         <label for='montant'>Montant Total :</label>
-        <input type='text' name='montant' readonly value='".$montant_cumul."'/> ";
+        <input type='text' required=required name='montant' readonly value='".$montant_cumul."'/> ";
        $resultat=$resultat."<button type='submit'>Valider mon panier</button>
        </form><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></section>";
         return $resultat;
