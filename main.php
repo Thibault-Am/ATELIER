@@ -60,6 +60,11 @@ $router->addRoute('validationPanier',
     '\appClient\control\clientController',
     'validationPanier',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
-    
+ $router->addRoute('annulationPanier',
+    '/annulationPanier/',
+    '\appClient\control\clientController',
+    'annulationPanier',
+    \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+          
 $router->setDefaultRoute('/categorie/');
 $router->run();
