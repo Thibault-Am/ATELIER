@@ -69,8 +69,8 @@ class clientController extends \mf\control\AbstractController {
     }
     public function setPanier(){
         $_SESSION['panier']=[];
-        $router = new \mf\router\Router();
-        header("Location: ".$router->urlFor('panier'));
+        $vues = new \appClient\view\ClientView(null);
+        return $vues->render('Panier');
     }
     public function addPanier(){
         if(empty($_SESSION['panier'])){
@@ -119,5 +119,9 @@ class clientController extends \mf\control\AbstractController {
             header("Location: ".$router->urlFor('categorie'));
             
     }
+    public function annulationPanier(){
 
+        $vues = new \appClient\view\ClientView(null);
+        return $vues->render('annulationPanier');
+    }
 }
