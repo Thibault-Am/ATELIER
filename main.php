@@ -21,7 +21,7 @@ $loader = new \mf\utils\ClassLoader('src');
 $loader->register();
 mf\view\AbstractView::addStyleSheet('html/style.css');
 $router = new \mf\router\Router();
-
+//unset($_SESSION);
 
 ////////////////////////////application client///////////////////////////////////
 
@@ -45,10 +45,21 @@ $router->addRoute('panier',
     '\appClient\control\clientController',
     'viewPanier',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
-$router->addRoute('setClient',
-    '/setClient/',
+$router->addRoute('setPanier',
+    '/setPanier/',
     '\appClient\control\clientController',
-    'setClient',
+    'setPanier',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('addPanier',
+    '/addPanier/',
+    '\appClient\control\clientController',
+    'addPanier',
+    \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+$router->addRoute('validationPanier',
+    '/validationPanier/',
+    '\appClient\control\clientController',
+    'validationPanier',
+    \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+    
 $router->setDefaultRoute('/categorie/');
 $router->run();
