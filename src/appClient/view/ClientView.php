@@ -77,7 +77,25 @@ class ClientView extends \mf\view\AbstractView {
      }
      private function renderUser(){
         $router = new \mf\router\Router();
-        $resultat="<article><h1>Producteur</h1><div>".$this->data->Nom."<div><img src=".$this->data->image."/></div></article> <div><h1>Description</h1>".$this->data->Description."</div></div><br>";
+        //Affichage des infos du producteur
+        $resultat="<article><h1>Producteur</h1><div>".$this->data->Nom.
+        "<img src=".$this->data->image."/>".$this->data->ID_PRODUIT.
+        "</article><h1>Description</h1>".$this->data->Description."</div><br>";
+    
+       
+
+
+        //Affichage produits producteur
+           $produits=\appClient\model\Production::where('ID_PRODUCTEUR',"=",$this->data->id)->get();  //recherche du bon id dans la table pivot
+        
+        foreach($produits as $id_produit){  
+            
+            $produit=\appClient\model\Produits::where('id',"=",$id_produit->ID_PRODUIT)->first();  //recherche dans la table produit
+            $resultat="<section id='produitsProducteur'><h1>$produit->nom</h1><img src='".$produit->Image."'/></section>";
+            
+            
+        }
+
         return $resultat;
      }
      private function renderPanier(){
