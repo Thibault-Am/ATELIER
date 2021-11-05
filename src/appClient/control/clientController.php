@@ -30,6 +30,7 @@ class clientController extends \mf\control\AbstractController {
         $categorie = \appClient\model\Categorie::select();
         $lignes = $categorie->get(); 
         $vues = new \appClient\view\ClientView($lignes);
+        $vues->setAppTitle("LeHangar.local - Categorie");
         return $vues->render('Categorie');
         }
 
@@ -38,6 +39,7 @@ class clientController extends \mf\control\AbstractController {
         $produits = \appClient\model\Produits::where('ID_categorie',"=",$id_categorie);
         $lignes = $produits->get(); 
         $vues = new \appClient\view\ClientView($lignes);
+        $vues->setAppTitle("LeHangar.local - Produit");
         return $vues->render('Produit');
     }
 
@@ -46,6 +48,7 @@ class clientController extends \mf\control\AbstractController {
         $user = \appClient\model\User::where('id',"=",$_GET['id_producteur']);
         $lignes=$user->first();
         $vues = new \appClient\view\ClientView($lignes);
+        $vues->setAppTitle("LeHangar.local - Producteur");
         return $vues->render('User');
        
     }
@@ -55,6 +58,7 @@ class clientController extends \mf\control\AbstractController {
         $produit = \appClient\model\Produits::where('id',"=",$_GET['id_produit']);
         $lignes=$produit->first();
         $vues = new \appClient\view\ClientView($lignes);
+        $vues->setAppTitle("LeHangar.local - PageProduit");
         return $vues->render('produitpage');
     }
 
@@ -63,6 +67,7 @@ class clientController extends \mf\control\AbstractController {
         $this->setPanier();
         //print_r($_SESSION['panier']);
         $vues = new \appClient\view\ClientView(null);
+        $vues->setAppTitle("LeHangar.local - Panier");
         return $vues->render('Panier');
         
         
