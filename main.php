@@ -65,6 +65,11 @@ $router->addRoute('validationPanier',
     '\appClient\control\clientController',
     'annulationPanier',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
-          
+$router->addRoute('updateQuantite',
+    '/updateQuantite/',
+    '\appClient\control\clientController',
+    'updateQuantite',
+    \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+    
 $router->setDefaultRoute('/categorie/');
 $router->run();

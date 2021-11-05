@@ -58,7 +58,7 @@ class clientController extends \mf\control\AbstractController {
     }
     public function viewPanier(){
        
-            
+        $this->setPanier();
         $commande=\appClient\model\commande::where('Nom_client','=',$_SESSION['client_name']);
         $lignes=$commande->get();
         $vues = new \appClient\view\ClientView($lignes);
@@ -68,25 +68,23 @@ class clientController extends \mf\control\AbstractController {
         
     }
     public function setPanier(){
-        $_SESSION['panier']=[];
-        $vues = new \appClient\view\ClientView(null);
-        return $vues->render('Panier');
-    }
-    public function addPanier(){
         if(empty($_SESSION['panier'])){
-            $this->setPanier();
-            $id_produit=$_GET['id_produit'];
-            $quantite=$_GET['quantite'];
-            array_push($_SESSION['panier'],[$id_produit=>$quantite]);
-            $router = new \mf\router\Router();
-            header("Location: ".$router->urlFor('panier'));
+            $_SESSION['panier']=[];
         }else{
-            $id_produit=$_GET['id_produit'];
-            $quantite=$_GET['quantite'];
+            $_SESSION['panier']=$_SESSION['panier'];
+        }
+       
+    }
+    public function addPanier($id_produit=null,$quantite=null){
+            $this->setPanier();
+            if($id_produit==null && $quantite==null){
+                $id_produit=$_GET['id_produit'];
+                $quantite=$_GET['quantite'];
+            }
             array_push($_SESSION['panier'],[$id_produit=>$quantite]);
             $router = new \mf\router\Router();
             header("Location: ".$router->urlFor('panier'));
-        }
+        
     }
 
     public function validationPanier(){
@@ -123,5 +121,22 @@ class clientController extends \mf\control\AbstractController {
 
         $vues = new \appClient\view\ClientView(null);
         return $vues->render('annulationPanier');
+    }
+    public function updateQuantite(){
+        $produits=$_GET['id_produit'];
+        $quantite=$_GET['quantite'];
+        $lignes=0;
+        foreach($_SESSION['panier']as $session_produit=>$session_quantite){
+            if($session_produit=$produits){
+                unset($_SESSION['panier'][$lignes]);
+            }
+            $lignes=$lignes+1;
+        }
+        if($quantite>0){
+            $this->addPanier( $produits, $quantite);
+        }else{
+            $this->viewPanier();
+        }
+        
     }
 }
