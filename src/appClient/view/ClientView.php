@@ -85,7 +85,7 @@ class ClientView extends \mf\view\AbstractView {
         <article>
         <div>
             <h1>Producteur :</h1>
-            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2>".$this->data->Nom."</h2>
+            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2><a href='".$router->urlFor('user', ['id_producteur'=>$this->data->id])."'>".$this->data->Nom."</a></h2>
         </div>
         <div><h1>Description</h1>".$this->data->Description.
 
@@ -102,7 +102,7 @@ class ClientView extends \mf\view\AbstractView {
             $produit=\appClient\model\Produits::where('id',"=",$id_produit->ID_PRODUIT)->first();  //recherche dans la table produit
 
             $resultat=
-            $resultat."<div><h2>$produit->nom :</h2>
+            $resultat."<div><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>$produit->nom :</a></h2>
             <img src='".$produit->Image."'
             <h3>$produit->tarif_unitaire €</h3></div>";
             
@@ -124,9 +124,12 @@ class ClientView extends \mf\view\AbstractView {
         $resultat="<section id='Produitpage'>
         <article>
         <div>
-            <h1>Producteur :</h1>
-            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2>".$this->data->Nom."</h2>
-        </div>";
+            <h1>Test :</h1>
+            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2><a href='".$router->urlFor('user', ['id_producteur'=>$this->data->id])."'>".$this->data->Nom."</a></h2>
+        </div>
+        <div><h1>Description</h1>".$this->data->Description.
+        
+        "</div>";
     
        
 
@@ -138,7 +141,7 @@ class ClientView extends \mf\view\AbstractView {
             $produit=\appClient\model\Produits::where('id',"=",1)->first();  //recherche dans la table produit
 
             $resultat=
-            $resultat."<div><h2>$produit->nom :</h2>
+            $resultat."<div><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>$produit->nom :</a></h2>
             <img src='".$produit->Image."'
            
             <h6>Description :</h6><h4>$produit->description</h4>
