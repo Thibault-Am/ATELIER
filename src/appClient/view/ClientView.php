@@ -67,11 +67,11 @@ class ClientView extends \mf\view\AbstractView {
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
         
                 $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
-                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div><a>".$produit->nom."</a><br/>".$nom_producteur->Nom."</div>";
-                $resultat=$resultat."<span><h2>Produit:</h2>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
+                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div><h2>Produit:</h2><a>".$produit->nom."</a><h2>Producteur:</h2><br/>".$nom_producteur->Nom."</div>";
+                $resultat=$resultat."<span><h2>Pix unitaire:</h2>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
             }
             
-         
+        
          $resultat=$resultat."</section>";
          return $resultat;        
          
@@ -179,7 +179,7 @@ class ClientView extends \mf\view\AbstractView {
                 $montant_cumul=$montant_cumul+($produit->tarif_unitaire*$quantite);
             }
         }
-        $resultat=$resultat."<form action='".$router->urlFor('validationPanier')."'>
+        $resultat=$resultat."<div><form action='".$router->urlFor('validationPanier')."'>
         <h1>VALIDATION DE LA COMANDE</h1></br>
         <input type='text' required=required name='nom' placeholder='Nom'/>
         <input type='text' required=required name='mail' placeholder='Mail'/>
@@ -187,7 +187,7 @@ class ClientView extends \mf\view\AbstractView {
         <label for='montant'>Montant Total :</label>
         <input type='text' required=required name='montant' readonly value='".$montant_cumul."'/> ";
        $resultat=$resultat."<button type='submit'>Valider mon panier</button>
-       </form><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></section>";
+       </form><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></div></section>";
 
         return $resultat;
      }
