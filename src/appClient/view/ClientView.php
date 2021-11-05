@@ -168,7 +168,7 @@ class ClientView extends \mf\view\AbstractView {
      private function renderPanier(){
         $router = new \mf\router\Router();
         $resultat="<section id='panier'>";
-        $montant_cumul;
+        $montant_cumul = 0;
         foreach($_SESSION['panier'] as $tab_produit){
             foreach($tab_produit as $id_produit=>$quantite){
                 $produit=\appClient\model\Produits::where('id',"=",$id_produit)->first();

@@ -302,7 +302,7 @@ section#panier span {
     grid-row: 2;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -312,7 +312,7 @@ section#panier span {
     grid-row: 2;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -322,7 +322,7 @@ section#panier span {
     grid-row: 2;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -332,7 +332,7 @@ section#panier span {
     grid-row: 2;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -342,7 +342,7 @@ section#panier span {
     grid-row: 3;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -352,7 +352,7 @@ section#panier span {
     grid-row: 3;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -362,7 +362,7 @@ section#panier span {
     grid-row: 3;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -372,7 +372,7 @@ section#panier span {
     grid-row: 3;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -382,7 +382,7 @@ section#panier span {
     grid-row: 4;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -392,7 +392,7 @@ section#panier span {
     grid-row: 4;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -402,7 +402,7 @@ section#panier span {
     grid-row: 4;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -412,7 +412,7 @@ section#panier span {
     grid-row: 4;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -422,7 +422,7 @@ section#panier span {
     grid-row: 5;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -432,7 +432,7 @@ section#panier span {
     grid-row: 5;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -442,7 +442,7 @@ section#panier span {
     grid-row: 5;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -452,7 +452,7 @@ section#panier span {
     grid-row: 5;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -462,7 +462,7 @@ section#panier span {
     grid-row: 6;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -472,7 +472,7 @@ section#panier span {
     grid-row: 6;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -482,7 +482,7 @@ section#panier span {
     grid-row: 6;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -492,7 +492,7 @@ section#panier span {
     grid-row: 6;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -502,7 +502,7 @@ section#panier span {
     grid-row: 7;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -512,7 +512,7 @@ section#panier span {
     grid-row: 7;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -522,7 +522,7 @@ section#panier span {
     grid-row: 7;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -532,7 +532,7 @@ section#panier span {
     grid-row: 7;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -542,7 +542,7 @@ section#panier span {
     grid-row: 8;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -552,7 +552,7 @@ section#panier span {
     grid-row: 8;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -562,7 +562,7 @@ section#panier span {
     grid-row: 8;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -572,7 +572,7 @@ section#panier span {
     grid-row: 8;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -582,7 +582,7 @@ section#panier span {
     grid-row: 9;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -592,7 +592,7 @@ section#panier span {
     grid-row: 9;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -602,7 +602,7 @@ section#panier span {
     grid-row: 9;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -612,7 +612,7 @@ section#panier span {
     grid-row: 9;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -622,7 +622,7 @@ section#panier span {
     grid-row: 10;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -632,7 +632,7 @@ section#panier span {
     grid-row: 10;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -642,7 +642,7 @@ section#panier span {
     grid-row: 10;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -652,7 +652,7 @@ section#panier span {
     grid-row: 10;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -662,7 +662,7 @@ section#panier span {
     grid-row: 11;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -672,7 +672,7 @@ section#panier span {
     grid-row: 11;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -682,7 +682,7 @@ section#panier span {
     grid-row: 11;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -692,7 +692,7 @@ section#panier span {
     grid-row: 11;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -702,7 +702,7 @@ section#panier span {
     grid-row: 12;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -712,7 +712,7 @@ section#panier span {
     grid-row: 12;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -722,7 +722,7 @@ section#panier span {
     grid-row: 12;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -732,7 +732,7 @@ section#panier span {
     grid-row: 12;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -742,7 +742,7 @@ section#panier span {
     grid-row: 13;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -752,7 +752,7 @@ section#panier span {
     grid-row: 13;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -762,7 +762,7 @@ section#panier span {
     grid-row: 13;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -772,7 +772,7 @@ section#panier span {
     grid-row: 13;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -782,7 +782,7 @@ section#panier span {
     grid-row: 14;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -792,7 +792,7 @@ section#panier span {
     grid-row: 14;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -802,7 +802,7 @@ section#panier span {
     grid-row: 14;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -812,7 +812,7 @@ section#panier span {
     grid-row: 14;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -822,7 +822,7 @@ section#panier span {
     grid-row: 15;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -832,7 +832,7 @@ section#panier span {
     grid-row: 15;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -842,7 +842,7 @@ section#panier span {
     grid-row: 15;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -852,7 +852,7 @@ section#panier span {
     grid-row: 15;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -862,7 +862,7 @@ section#panier span {
     grid-row: 16;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -872,7 +872,7 @@ section#panier span {
     grid-row: 16;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -882,7 +882,7 @@ section#panier span {
     grid-row: 16;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -892,7 +892,7 @@ section#panier span {
     grid-row: 16;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -902,7 +902,7 @@ section#panier span {
     grid-row: 17;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -912,7 +912,7 @@ section#panier span {
     grid-row: 17;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -922,7 +922,7 @@ section#panier span {
     grid-row: 17;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -932,7 +932,7 @@ section#panier span {
     grid-row: 17;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -942,7 +942,7 @@ section#panier span {
     grid-row: 18;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -952,7 +952,7 @@ section#panier span {
     grid-row: 18;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -962,7 +962,7 @@ section#panier span {
     grid-row: 18;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -972,7 +972,7 @@ section#panier span {
     grid-row: 18;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -982,7 +982,7 @@ section#panier span {
     grid-row: 19;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -992,7 +992,7 @@ section#panier span {
     grid-row: 19;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1002,7 +1002,7 @@ section#panier span {
     grid-row: 19;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1012,7 +1012,7 @@ section#panier span {
     grid-row: 19;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1022,7 +1022,7 @@ section#panier span {
     grid-row: 20;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1032,7 +1032,7 @@ section#panier span {
     grid-row: 20;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1042,7 +1042,7 @@ section#panier span {
     grid-row: 20;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1052,7 +1052,7 @@ section#panier span {
     grid-row: 20;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1062,7 +1062,7 @@ section#panier span {
     grid-row: 21;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1072,7 +1072,7 @@ section#panier span {
     grid-row: 21;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1082,7 +1082,7 @@ section#panier span {
     grid-row: 21;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1092,7 +1092,7 @@ section#panier span {
     grid-row: 21;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1102,7 +1102,7 @@ section#panier span {
     grid-row: 22;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1112,7 +1112,7 @@ section#panier span {
     grid-row: 22;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1122,7 +1122,7 @@ section#panier span {
     grid-row: 22;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1132,7 +1132,7 @@ section#panier span {
     grid-row: 22;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1142,7 +1142,7 @@ section#panier span {
     grid-row: 23;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1152,7 +1152,7 @@ section#panier span {
     grid-row: 23;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1162,7 +1162,7 @@ section#panier span {
     grid-row: 23;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1172,7 +1172,7 @@ section#panier span {
     grid-row: 23;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1182,7 +1182,7 @@ section#panier span {
     grid-row: 24;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1192,7 +1192,7 @@ section#panier span {
     grid-row: 24;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1202,7 +1202,7 @@ section#panier span {
     grid-row: 24;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1212,7 +1212,7 @@ section#panier span {
     grid-row: 24;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1222,7 +1222,7 @@ section#panier span {
     grid-row: 25;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1232,7 +1232,7 @@ section#panier span {
     grid-row: 25;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1242,7 +1242,7 @@ section#panier span {
     grid-row: 25;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1252,7 +1252,7 @@ section#panier span {
     grid-row: 25;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1262,7 +1262,7 @@ section#panier span {
     grid-row: 26;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1272,7 +1272,7 @@ section#panier span {
     grid-row: 26;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1282,7 +1282,7 @@ section#panier span {
     grid-row: 26;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -1292,7 +1292,7 @@ section#panier span {
     grid-row: 26;
     border-radius: 30px;
     box-shadow: 0 0 1em gray;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
