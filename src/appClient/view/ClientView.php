@@ -86,7 +86,7 @@ class ClientView extends \mf\view\AbstractView {
             <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2>".$this->data->Nom."</h2>
         </div>
         <div><h1>Description</h1>".$this->data->Description.
-        
+
         "</div>";
     
        
