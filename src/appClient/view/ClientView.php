@@ -125,9 +125,9 @@ class ClientView extends \mf\view\AbstractView {
         <article>
         <div>
             <h1>Test :</h1>
-            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2><a href='".$router->urlFor('user', ['id_producteur'=>$this->data->id])."'>".$this->data->Nom."</a></h2>
+            <img src='".$this->data->Image."'/><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$this->data->id])."'>".$this->data->nom."</a></h2>
         </div>
-        <div><h1>Description</h1>".$this->data->Description.
+        <div><h1>Description </h1>".$this->data->description.
         
         "</div>";
     
@@ -135,22 +135,21 @@ class ClientView extends \mf\view\AbstractView {
 
 
         //Affichage produits producteur
-           $produits=\appClient\model\Production::where('ID_PRODUCTEUR',"=",$this->data->id)->get();  //recherche du bon id dans la table pivot
+           $produits=\appClient\model\Production::where('ID_PRODUIT',"=",$this->data->id)->get();  //recherche du bon id dans la table pivot
         
-         
-            $produit=\appClient\model\Produits::where('id',"=",1)->first();  //recherche dans la table produit
+           foreach($produits as $id_produit){  
+                $producteur=\appClient\model\User::where('id',"=",$id_produit->ID_PRODUCTEUR)->first();  //recherche dans la table produit
 
-            $resultat=
-            $resultat."<div><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>$produit->nom :</a></h2>
-            <img src='".$produit->Image."'
-           
-            <h6>Description :</h6><h4>$produit->description</h4>
-            <h5>$produit->tarif_unitaire €</h5></div>";
+                $resultat=
+                $resultat."<div><h2><a href='".$router->urlFor('user', ['id_producteur'=>$producteur->id])."'>$producteur->Nom :</a></h2>
+                <img src='".$producteur->Image."'/>'
             
+                <h6>Description :</h6><h4>$producteur->Description</h4></div>";
+                
+           }
+        
+            $resultat=$resultat."</article></section>";
             
-        
-                $resultat=$resultat."</article></section>";
-        
         return $resultat;
      }
 
