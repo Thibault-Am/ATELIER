@@ -85,10 +85,10 @@ class ClientView extends \mf\view\AbstractView {
         <article>
         <div>
             <h1>Producteur :</h1>
-            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2><a href='".$router->urlFor('user', ['id_producteur'=>$this->data->id])."'>".$this->data->Nom."</a></h2>
+            <img src='".$this->data->Image."'/>".$this->data->ID_PRODUIT."<h2><a href='".$router->urlFor('user', ['id_producteur'=>$this->data->id])."'>".$this->data->Nom."</a></h2>
         </div>
         <div><h1>Description</h1>".$this->data->Description.
-
+        
         "</div>";
     
        
@@ -124,11 +124,17 @@ class ClientView extends \mf\view\AbstractView {
         $resultat="<section id='Produitpage'>
         <article>
         <div>
+            <span>
             <h1>Test :</h1>
             <img src='".$this->data->Image."'/><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$this->data->id])."'>".$this->data->nom."</a></h2>
-        </div>
-        <div><h1>Description </h1>".$this->data->description.
-        
+            </span>
+            <div><div><h1>Description </h1>".$this->data->description."</div>
+            <form action='".$router->urlFor('addPanier')."'>
+            <label for='quantite'>Quantité :</label>
+            <input type='number' name='quantite' required min='0'/>
+            
+            <button type='submit' name='id_produit' value='".$this->data->id."'>Ajouter au panier</button></form></div>".
+
         "</div>";
     
        
@@ -166,6 +172,7 @@ class ClientView extends \mf\view\AbstractView {
         foreach($_SESSION['panier'] as $tab_produit){
             foreach($tab_produit as $id_produit=>$quantite){
                 $produit=\appClient\model\Produits::where('id',"=",$id_produit)->first();
+                
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
                 $producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
                 $resultat=$resultat."<div id='listPanier'><span><img src='".$produit->Image."'/></span>

@@ -61,9 +61,7 @@ class clientController extends \mf\control\AbstractController {
     public function viewPanier(){
        
         $this->setPanier();
-        $commande=\appClient\model\commande::where('Nom_client','=',$_SESSION['client_name']);
-        $lignes=$commande->get();
-        $vues = new \appClient\view\ClientView($lignes);
+        $vues = new \appClient\view\ClientView(null);
         return $vues->render('Panier');
         
         
