@@ -52,7 +52,7 @@ class clientController extends \mf\control\AbstractController {
 
     public function viewproduitpage(){ 
         //retourne les infos de la table user
-        $user = \appClient\model\User::where('id',"=",1);
+        $user = \appClient\model\User::where('id',"=",$_GET['id_produit']);
         $lignes=$user->first();
         $vues = new \appClient\view\ClientView($lignes);
         return $vues->render('produitpage');
