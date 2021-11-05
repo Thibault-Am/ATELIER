@@ -1,103 +1,62 @@
-section#Producteur article {
-  box-sizing: border-box;
-  border: 1px solid black;
-  padding: 20px;
+header a img {
+  border-radius: 50%;
 }
-section#Producteur article > div:nth-child(1) {
-  padding: 20px;
-  grid-column: 1/2;
-  grid-row: 1;
-  border-radius: 30px;
-  box-shadow: 0 0 1em gray;
+
+header a:nth-child(3) {
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+}
+
+header a:nth-child(3):link {
+  background-color: brown;
+}
+
+section#panier > div#valid > form {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: space-around;
+}
+
+section#panier > div#valid > form > input {
+  flex-basis: 100%;
+  padding-bottom: 10px;
   margin-bottom: 10px;
 }
-section#Producteur article > div:nth-child(1) h1 {
-  font-size: 20px;
+
+section#panier > div#valid > form > h1 {
+  flex-basis: 100%;
 }
-section#Producteur article > div:nth-child(1) h2 {
-  font-size: 25px;
-  text-align: center;
-  background-color: cadetblue;
-  border-radius: 0px 0px 10px 10px;
+
+section#panier > div#valid > a {
+  flex-basis: 100%;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
 }
-section#Producteur article > div:nth-child(1) img {
+section#panier > div#valid > a:link {
+  background-color: brown;
+}
+
+section#panier > div#valid > form > button {
+  flex-basis: 100%;
+  background-color: green;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px 10px 10px 10px;
+}
+
+section#categorie article {
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: auto;
+}
+
+section#Producteur article img {
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
-}
-section#Producteur article > div:nth-child(2) {
-  padding: 20px;
-  grid-column: 3/4;
-  grid-row: 1;
-  height: 30%;
-  border-radius: 30px;
-  box-shadow: 0 0 1em gray;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-section#Producteur article > div:nth-child(3) {
-  grid-column: 1/2;
-  grid-row: 2;
-  box-shadow: 0 0 1em gray;
-  border-radius: 10px;
-  display: block;
-  text-align: center;
-}
-section#Producteur article > div:nth-child(3) img {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 2px gray;
-  width: 200px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-section#Producteur article > div:nth-child(4) {
-  grid-column: 2/3;
-  grid-row: 2;
-  box-shadow: 0 0 1em gray;
-  border-radius: 10px;
-  display: block;
-  text-align: center;
-}
-section#Producteur article > div:nth-child(4) img {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 2px gray;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-section#Producteur article > div:nth-child(5) {
-  grid-column: 3/4;
-  grid-row: 2;
-  box-shadow: 0 0 1em gray;
-  border-radius: 10px;
-  display: block;
-  text-align: center;
-}
-section#Producteur article > div:nth-child(5) img {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 2px gray;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-section#Producteur article > div:nth-child(6) {
-  grid-column: 4/5;
-  grid-row: 2;
-  box-shadow: 0 0 1em gray;
-  border-radius: 10px;
-  display: block;
-  text-align: center;
-}
-section#Producteur article > div:nth-child(6) img {
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 2px gray;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
 }
 
 section#Produitpage article {
@@ -287,7 +246,7 @@ section#panier span {
     grid-gap: 10px;
   }
 
-  section#panier > div {
+  section#panier > div#listPanier {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
@@ -297,29 +256,1056 @@ section#panier span {
     margin: auto;
   }
 
+  section#panier > div#valid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  section#Producteur article {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px;
+  }
   section#Producteur article > div:nth-child(1) {
+    padding: 20px;
     grid-column: 1/2;
     grid-row: 1;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    margin-bottom: 10px;
+  }
+  section#Producteur article > div:nth-child(1) h1 {
+    font-size: 20px;
+  }
+  section#Producteur article > div:nth-child(1) h2 {
+    font-size: 25px;
+    text-align: center;
+    background-color: cadetblue;
+    border-radius: 0px 0px 10px 10px;
+  }
+  section#Producteur article > div:nth-child(1) img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
   }
   section#Producteur article > div:nth-child(2) {
+    padding: 20px;
     grid-column: 3/4;
     grid-row: 1;
+    height: 30%;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
+
+  section#panier > div#valid > form {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
   section#Producteur article > div:nth-child(3) {
+    padding: 20px;
     grid-column: 1/2;
     grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
+
   section#Producteur article > div:nth-child(4) {
+    padding: 20px;
     grid-column: 2/3;
     grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
+
   section#Producteur article > div:nth-child(5) {
+    padding: 20px;
     grid-column: 3/4;
     grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
+
   section#Producteur article > div:nth-child(6) {
+    padding: 20px;
     grid-column: 4/5;
     grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(7) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(8) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(9) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(10) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(11) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(12) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(13) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(14) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(15) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(16) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(17) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(18) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(19) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(20) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(21) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(22) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(23) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(24) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(25) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(26) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(27) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(28) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(29) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(30) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(31) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(32) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(33) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(34) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(35) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(36) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(37) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(38) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(39) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(40) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(41) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(42) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(43) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(44) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(45) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(46) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(47) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(48) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(49) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(50) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(51) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(52) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(53) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(54) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(55) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(56) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(57) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(58) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(59) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(60) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(61) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(62) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(63) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(64) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(65) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(66) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(67) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(68) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(69) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(70) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(71) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(72) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(73) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(74) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(75) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(76) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(77) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(78) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(79) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(80) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(81) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(82) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(83) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(84) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(85) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(86) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(87) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(88) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(89) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(90) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(91) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(92) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(93) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(94) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(95) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(96) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(97) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(98) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(99) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(100) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(101) {
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(102) {
+    padding: 20px;
+    grid-column: 4/5;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .centered {
@@ -329,12 +1315,6 @@ section#panier span {
     color: brown;
     font-size: 30px;
     font-weight: bold;
-  }
-
-  section#categorie article {
-    box-sizing: border-box;
-    border: 1px solid black;
-    height: auto;
   }
 
   section#categorie article:first-child {
@@ -377,7 +1357,7 @@ section#panier span {
     grid-row: 2;
   }
 
-  section#panier > div > img {
+  section#panier > div > span > img {
     grid-column: 1/2;
     grid-row: 1;
     width: 100%;
@@ -413,7 +1393,7 @@ section#panier span {
     grid-gap: 10px;
   }
 
-  section#panier > div {
+  section#panier > div#listPanier {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -423,12 +1403,1064 @@ section#panier span {
     margin: auto;
   }
 
-  section#Producteur > div {
+  section#panier > div#valid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  section#Producteur article {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-auto-flow: row;
     grid-gap: 10px;
+  }
+
+  section#panier > div#valid > form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section#Producteur article {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 20px;
+  }
+  section#Producteur article > div:nth-child(1) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 1;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    margin-bottom: 10px;
+  }
+  section#Producteur article > div:nth-child(1) h1 {
+    font-size: 20px;
+  }
+  section#Producteur article > div:nth-child(1) h2 {
+    font-size: 25px;
+    text-align: center;
+    background-color: cadetblue;
+    border-radius: 0px 0px 10px 10px;
+  }
+  section#Producteur article > div:nth-child(1) img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  section#Producteur article > div:nth-child(2) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 1;
+    height: 30%;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(3) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(4) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 2;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(5) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(6) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 3;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(7) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(8) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 4;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(9) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(10) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 5;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(11) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(12) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 6;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(13) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(14) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 7;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(15) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(16) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 8;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(17) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(18) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 9;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(19) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(20) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 10;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(21) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(22) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 11;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(23) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(24) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 12;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(25) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(26) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 13;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(27) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(28) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 14;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(29) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(30) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 15;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(31) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(32) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 16;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(33) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(34) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 17;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(35) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(36) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 18;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(37) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(38) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 19;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(39) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(40) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 20;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(41) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(42) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 21;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(43) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(44) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 22;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(45) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(46) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 23;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(47) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(48) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 24;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(49) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(50) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 25;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(51) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(52) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 26;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(53) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 27;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(54) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 27;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(55) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 28;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(56) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 28;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(57) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 29;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(58) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 29;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(59) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 30;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(60) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 30;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(61) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 31;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(62) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 31;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(63) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 32;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(64) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 32;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(65) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 33;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(66) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 33;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(67) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 34;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(68) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 34;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(69) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 35;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(70) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 35;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(71) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 36;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(72) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 36;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(73) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 37;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(74) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 37;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(75) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 38;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(76) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 38;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(77) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 39;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(78) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 39;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(79) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 40;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(80) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 40;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(81) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 41;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(82) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 41;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(83) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 42;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(84) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 42;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(85) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 43;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(86) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 43;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(87) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 44;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(88) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 44;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(89) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 45;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(90) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 45;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(91) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 46;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(92) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 46;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(93) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 47;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(94) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 47;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(95) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 48;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(96) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 48;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(97) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 49;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(98) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 49;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(99) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 50;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(100) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 50;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(101) {
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 51;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  section#Producteur article > div:nth-child(102) {
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 51;
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .centered {
@@ -438,40 +2470,6 @@ section#panier span {
     color: brown;
     font-size: 30px;
     font-weight: bold;
-  }
-
-  section#Producteur article {
-    display: grid;
-  }
-  section#Producteur article > div:nth-child(1) {
-    grid-column: 1/2;
-    grid-row: 1;
-  }
-  section#Producteur article > div:nth-child(2) {
-    grid-column: 3/4;
-    grid-row: 1;
-  }
-  section#Producteur article > div:nth-child(3) {
-    grid-column: 1/2;
-    grid-row: 2;
-  }
-  section#Producteur article > div:nth-child(4) {
-    grid-column: 3/4;
-    grid-row: 2;
-  }
-  section#Producteur article > div:nth-child(5) {
-    grid-column: 1/2;
-    grid-row: 3;
-  }
-  section#Producteur article > div:nth-child(6) {
-    grid-column: 3/4;
-    grid-row: 3;
-  }
-
-  section#categorie article {
-    box-sizing: border-box;
-    border: 1px solid black;
-    height: auto;
   }
 
   section#categorie article:first-child {
@@ -514,7 +2512,7 @@ section#panier span {
     grid-row: 2;
   }
 
-  section#panier > div > img {
+  section#panier > div > span > img {
     grid-column: 1/2;
     grid-row: 1;
     width: 100%;
@@ -522,7 +2520,7 @@ section#panier span {
   }
 
   section#panier > div > span:nth-child(2) {
-    grid-column: 1/3;
+    grid-column: 2/3;
     grid-row: 1;
   }
 
@@ -537,83 +2535,10 @@ section#panier span {
   }
 
   section#panier > div > span:nth-child(5) {
-    grid-column: 5/6;
-    grid-row: 1;
+    grid-column: 4/5;
+    grid-row: 2;
   }
 }
-section#categorie article {
-  box-sizing: border-box;
-  border: 1px solid black;
-  height: auto;
-}
-
-section#categorie article:first-child {
-  grid-column: 1/2;
-  grid-row: 1;
-}
-
-section#categorie article:nth-child(2) {
-  grid-column: 2/3;
-  grid-row: 1;
-}
-
-section#categorie article:nth-child(3) {
-  grid-column: 3/4;
-  grid-row: 1;
-}
-
-section#categorie article:nth-child(4) {
-  grid-column: 1/2;
-  grid-row: 2;
-}
-
-section#categorie article:nth-child(5) {
-  grid-column: 2/3;
-  grid-row: 2;
-}
-
-section#categorie article:nth-child(6) {
-  grid-column: 3/4;
-  grid-row: 2;
-}
-
-section#categorie article:nth-child(7) {
-  grid-column: 1/2;
-  grid-row: 3;
-}
-
-section#categorie article:nth-child(8) {
-  grid-column: 2/3;
-  grid-row: 3;
-}
-
-section#panier > div > img {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  width: 100%;
-  height: auto;
-}
-
-section#panier > div > span:nth-child(2) {
-  grid-column: 2/3;
-  grid-row: 1;
-}
-
-section#panier > div > span:nth-child(3) {
-  grid-column: 3/4;
-  grid-row: 1;
-}
-
-section#panier > div > span:nth-child(4) {
-  grid-column: 4/5;
-  grid-row: 1;
-}
-
-section#panier > div > span:nth-child(5) {
-  grid-column: 4/5;
-  grid-row: 2;
-}
-
 @media screen and (max-width: 599px) {
   section#categorie {
     display: grid;
@@ -623,7 +2548,7 @@ section#panier > div > span:nth-child(5) {
     grid-gap: 10px;
   }
 
-  section#panier > div {
+  section#panier > div#listPanier {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -633,6 +2558,46 @@ section#panier > div > span:nth-child(5) {
     margin: auto;
   }
 
+  section#panier > div#valid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  section#Producteur article {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  section#panier > div#valid > form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section#Producteur article > div:first-child {
+    flex-basis: 40%;
+  }
+
+  section#Producteur article > div:nth-child(2) {
+    flex-basis: 40%;
+  }
+
+  section#Producteur article > div {
+    border-radius: 30px;
+    box-shadow: 0 0 1em gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .centered {
     position: relative;
     top: -80%;
@@ -640,12 +2605,6 @@ section#panier > div > span:nth-child(5) {
     color: brown;
     font-size: 30px;
     font-weight: bold;
-  }
-
-  section#categorie article {
-    box-sizing: border-box;
-    border: 1px solid black;
-    height: auto;
   }
 
   section#categorie article:first-child {
@@ -688,7 +2647,7 @@ section#panier > div > span:nth-child(5) {
     grid-row: 4;
   }
 
-  section#panier > div > img {
+  section#panier > div > span > img {
     grid-column: 1;
     grid-row: 1;
     width: 100%;

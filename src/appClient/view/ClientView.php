@@ -67,7 +67,9 @@ class ClientView extends \mf\view\AbstractView {
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
         
                 $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
-                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div><h2>Produit:</h2><a>".$produit->nom."</a><h2>Producteur:</h2><br/>".$nom_producteur->Nom."</div>";
+                $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div>
+                <h2>Produit:</h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>".$produit->nom."</a>
+                <h2>Producteur:</h2><br/><a href='".$router->urlFor('user', ['id_producteur'=>$nom_producteur->id])."'>".$nom_producteur->Nom."</a></div>";
                 $resultat=$resultat."<span><h2>Pix unitaire:</h2>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
             }
             
@@ -166,7 +168,7 @@ class ClientView extends \mf\view\AbstractView {
                 $produit=\appClient\model\Produits::where('id',"=",$id_produit)->first();
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
                 $producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
-                $resultat=$resultat."<div><img src='".$produit->Image."'/>
+                $resultat=$resultat."<div id='listPanier'><span><img src='".$produit->Image."'/></span>
                 <span><h1>Produit :</h1><h2>".$produit->nom."</h2></span>
                 <span><h1>Quantité :</h1><h2><form action='".$router->urlFor('updateQuantite')."'><input type='number' value='".$quantite."' min='0' name='quantite'/></br>
                 <label for='id_produit'>Identifiant du produit</label>
@@ -179,7 +181,7 @@ class ClientView extends \mf\view\AbstractView {
                 $montant_cumul=$montant_cumul+($produit->tarif_unitaire*$quantite);
             }
         }
-        $resultat=$resultat."<div><form action='".$router->urlFor('validationPanier')."'>
+        $resultat=$resultat."<div id='valid'><form action='".$router->urlFor('validationPanier')."'>
         <h1>VALIDATION DE LA COMANDE</h1></br>
         <input type='text' required=required name='nom' placeholder='Nom'/>
         <input type='text' required=required name='mail' placeholder='Mail'/>
@@ -187,7 +189,7 @@ class ClientView extends \mf\view\AbstractView {
         <label for='montant'>Montant Total :</label>
         <input type='text' required=required name='montant' readonly value='".$montant_cumul."'/> ";
        $resultat=$resultat."<button type='submit'>Valider mon panier</button>
-       </form><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></div></section>";
+       </form></br><a href='".$router->urlFor('annulationPanier')."' >Annuler mon panier</a></div></section>";
 
         return $resultat;
      }
