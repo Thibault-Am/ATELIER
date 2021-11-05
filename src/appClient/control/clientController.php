@@ -43,16 +43,11 @@ class clientController extends \mf\control\AbstractController {
 
     public function viewUser(){ 
         //retourne les infos de la table user
-        $user = \appClient\model\User::where('id',"=",3);
+        $user = \appClient\model\User::where('id',"=",$_GET['id_producteur']);
         $lignes=$user->first();
         $vues = new \appClient\view\ClientView($lignes);
         return $vues->render('User');
-
-        //Jonction des tables user et produit grace a la table production
-        $produits = User::where('id' ,'=', 1);          //Selection du producteur avec l'id "1"
-        $var=$produits->ProducteurProduits()->get();    //On recupere ses produits
-        return $var->render('User');
-        
+       
     }
 
     public function viewproduitpage(){ 
