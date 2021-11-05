@@ -40,6 +40,14 @@ $router->addRoute('user',
     '\appClient\control\clientController',
     'viewUser',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+
+    $router->addRoute('produitpage',
+    '/produitpage/',
+    '\appClient\control\clientController',
+    'viewproduitpage',
+    \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+
+
 $router->addRoute('panier',
     '/panier/',
     '\appClient\control\clientController',
@@ -65,6 +73,10 @@ $router->addRoute('validationPanier',
     '\appClient\control\clientController',
     'annulationPanier',
     \appClient\auth\ClientAuthentification::ACCESS_LEVEL_NONE);
+
+    
+
+
           
 $router->setDefaultRoute('/categorie/');
 $router->run();

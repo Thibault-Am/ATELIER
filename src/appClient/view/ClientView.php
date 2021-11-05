@@ -85,9 +85,9 @@ class ClientView extends \mf\view\AbstractView {
         $resultat="<section id='Producteur'>
         <article>
         <div>
-            <h1>Producteur</h1><h2>".$this->data->Nom."</h2>
-            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT.
-        "</div>
+            <h1>Producteur :</h1>
+            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2>".$this->data->Nom."</h2>
+        </div>
         <div><h1>Description</h1>".$this->data->Description.
         
         "</div>";
@@ -103,9 +103,9 @@ class ClientView extends \mf\view\AbstractView {
             $produit=\appClient\model\Produits::where('id',"=",$id_produit->ID_PRODUIT)->first();  //recherche dans la table produit
 
             $resultat=
-            $resultat."<div><h2>$produit->nom</h2>
+            $resultat."<div><h2>$produit->nom :</h2>
             <img src='".$produit->Image."'
-            <h3>$produit->tarif_unitaire </h3></div>";
+            <h3>$produit->tarif_unitaire €</h3></div>";
             
             
         }
@@ -114,6 +114,52 @@ class ClientView extends \mf\view\AbstractView {
         return $resultat;
         
      }
+
+
+
+
+
+     private function renderproduitpage(){
+        $router = new \mf\router\Router();
+        //Affichage des infos du producteur
+        $resultat="<section id='Produitpage'>
+        <article>
+        <div>
+            <h1>Test :</h1>
+            <img src=".$this->data->Image."/>".$this->data->ID_PRODUIT."<h2>".$this->data->Nom."</h2>
+        </div>
+        <div><h1>Description</h1>".$this->data->Description.
+        
+        "</div>";
+    
+       
+
+
+        //Affichage produits producteur
+           $produits=\appClient\model\Production::where('ID_PRODUCTEUR',"=",$this->data->id)->get();  //recherche du bon id dans la table pivot
+        
+        foreach($produits as $id_produit){  
+            
+            $produit=\appClient\model\Produits::where('id',"=",$id_produit->ID_PRODUIT)->first();  //recherche dans la table produit
+
+            $resultat=
+            $resultat."<div><h2>$produit->nom :</h2>
+            <img src='".$produit->Image."'
+            <h3>$produit->tarif_unitaire €</h3></div>";
+            
+            
+        }
+                $resultat=$resultat."</article></section>";
+        
+        return $resultat;
+     }
+
+
+
+
+
+
+
      private function renderPanier(){
         $router = new \mf\router\Router();
         $resultat="<section id='panier'>";
@@ -170,11 +216,13 @@ class ClientView extends \mf\view\AbstractView {
         if($selector == 'annulationPanier'){
             $section = $this->renderannulationPanier();
         }
+        if($selector == 'produitpage'){
+            $section = $this->renderproduitpage();
+        }
         return "<header>${header}</header><section>${section}</section><footer>${footer}</footer>";
     }
 
     
-
 
 
 
