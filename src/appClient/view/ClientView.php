@@ -65,12 +65,12 @@ class ClientView extends \mf\view\AbstractView {
              //var_dump($categorie);
              foreach($this->data as $produit){
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
-        
+                $produit=\appClient\model\Produits::where('id',"=",$produit->id)->first();
                 $nom_producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
                 $resultat =$resultat."<article><form action='".$router->urlFor('addPanier')."'><img src='".$produit->Image."'/><div>
                 <h2>Produit:</h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>".$produit->nom."</a>
                 <h2>Producteur:</h2><br/><a href='".$router->urlFor('user', ['id_producteur'=>$nom_producteur->id])."'>".$nom_producteur->Nom."</a></div>";
-                $resultat=$resultat."<span><h2>Pix unitaire:</h2>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
+                $resultat=$resultat."<span><h2>Pix unitaire (".$produit->Quantite."):</h2>".$produit->tarif_unitaire.".00€ </span><input type='number' required=required  name='quantite' min='0'/><button type='submit' name='id_produit' value='".$produit->id."'> AJOUTER AU PANIER</button></form>"."</article>";
             }
             
         
@@ -176,13 +176,13 @@ class ClientView extends \mf\view\AbstractView {
                 $id_producteur=\appClient\model\Production::where('ID_PRODUIT',"=",$produit->id)->first();
                 $producteur=\appClient\model\User::where('id',"=",$id_producteur->ID_PRODUCTEUR)->first();
                 $resultat=$resultat."<div id='listPanier'><span><img src='".$produit->Image."'/></span>
-                <span><h1>Produit :</h1><h2>".$produit->nom."</h2></span>
+                <span><h1>Produit :</h1><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>".$produit->nom."</a></h2></span>
                 <span><h1>Quantité :</h1><h2><form action='".$router->urlFor('updateQuantite')."'><input type='number' value='".$quantite."' min='0' name='quantite'/></br>
                 <label for='id_produit'>Identifiant du produit</label>
                 <input type='text' readonly value='".$produit->id."' min='0' name='id_produit'/>
                 <button type='submit'>Mettre à jour la quantité</button></form></h2></span>
-                <span><h1>Tarif pour $quantite lot(s) ".$produit->nom."(s) :</h1><h2>".$produit->tarif_unitaire*$quantite.".00€</h2></span>
-                <span><h1>Producteur :</h1><h2>$producteur->Nom</h2></span>
+                <span><h1>Tarif pour $quantite lot(s) de (".$produit->Quantite.") ".$produit->nom."(s) :</h1><h2>".$produit->tarif_unitaire*$quantite.".00€</h2></span>
+                <span><h1>Producteur :</h1><h2><a href='".$router->urlFor('user', ['id_producteur'=>$producteur->id])."'>$producteur->Nom</a></h2></span>
                 
                 </div>";
                 $montant_cumul=$montant_cumul+($produit->tarif_unitaire*$quantite);
