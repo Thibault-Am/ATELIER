@@ -103,7 +103,7 @@ class ClientView extends \mf\view\AbstractView {
 
             $resultat=
             $resultat."<div><h2><a href='".$router->urlFor('produitpage', ['id_produit'=>$produit->id])."'>$produit->nom :</a></h2>
-            <img src='".$produit->Image."'
+            <img src='".$produit->Image."'/>
             <h3>$produit->tarif_unitaire €</h3></div>";
             
             

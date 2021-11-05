@@ -61,6 +61,7 @@ class clientController extends \mf\control\AbstractController {
     public function viewPanier(){
        
         $this->setPanier();
+        //print_r($_SESSION['panier']);
         $vues = new \appClient\view\ClientView(null);
         return $vues->render('Panier');
         
@@ -126,17 +127,36 @@ class clientController extends \mf\control\AbstractController {
         $produits=$_GET['id_produit'];
         $quantite=$_GET['quantite'];
         $lignes=0;
-        foreach($_SESSION['panier']as $session_produit=>$session_quantite){
-            if($session_produit=$produits){
-                unset($_SESSION['panier'][$lignes]);
-            }
+        while ($lignes<count($_SESSION['panier'])){
+
+
+                foreach($_SESSION['panier'][$lignes] as $session_produit=>$session_quantite){
+                    if($session_produit==$produits){
+                        $arrayReplace=array($produits=>$quantite);
+                        $_SESSION['panier'][$lignes]=$arrayReplace;
+                        $this->viewPanier();
+                        
+                    }
+                }
+            
+            
+            //print_r($_SESSION['panier'][$lignes]);
             $lignes=$lignes+1;
         }
-        if($quantite>0){
+       /* foreach($_SESSION['panier'][$produits] as $session_produit=>$session_quantite){
+
+            if($session_produit==$produits){
+                print_r($_SESSION['panier'][$lignes]);
+                unset($_SESSION['panier'][$lignes][$produits]);
+            }
+            $lignes=$lignes+1;
+        }*/
+
+        /*if($quantite>0){
             $this->addPanier( $produits, $quantite);
         }else{
             $this->viewPanier();
-        }
+        }*/
         
     }
 }
