@@ -100,6 +100,108 @@ section#Producteur article > div:nth-child(6) img {
   margin-right: auto;
 }
 
+section#Produitpage article {
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 20px;
+}
+section#Produitpage article > div:nth-child(1) {
+  padding: 20px;
+  grid-column: 1/2;
+  grid-row: 1;
+  border-radius: 30px;
+  box-shadow: 0 0 1em gray;
+  margin-bottom: 10px;
+}
+section#Produitpage article > div:nth-child(1) h1 {
+  font-size: 20px;
+}
+section#Produitpage article > div:nth-child(1) h2 {
+  font-size: 25px;
+  text-align: center;
+  background-color: cadetblue;
+  border-radius: 0px 0px 10px 10px;
+}
+section#Produitpage article > div:nth-child(1) img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+section#Produitpage article > div:nth-child(2) {
+  padding: 20px;
+  grid-column: 3/4;
+  grid-row: 1;
+  height: 30%;
+  border-radius: 30px;
+  box-shadow: 0 0 1em gray;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+section#Produitpage article > div:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2;
+  box-shadow: 0 0 1em gray;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+}
+section#Produitpage article > div:nth-child(3) img {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#Produitpage article > div:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 2;
+  box-shadow: 0 0 1em gray;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+}
+section#Produitpage article > div:nth-child(4) img {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#Produitpage article > div:nth-child(5) {
+  grid-column: 3/4;
+  grid-row: 2;
+  box-shadow: 0 0 1em gray;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+}
+section#Produitpage article > div:nth-child(5) img {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section#Produitpage article > div:nth-child(6) {
+  grid-column: 4/5;
+  grid-row: 2;
+  box-shadow: 0 0 1em gray;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+}
+section#Produitpage article > div:nth-child(6) img {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img.panier {
   width: 100px;
 }
